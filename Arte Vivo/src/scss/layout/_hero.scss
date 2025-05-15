@@ -1,0 +1,81 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.webp-lossless .hero{
+  @include m.tablet {
+    background-image: url('/build/img/hero.jpg');
+  }
+}
+
+.wepb .hero{
+  @include m.tablet {
+    background-image: url('/build/img/hero.webp');
+  }
+}
+.hero{
+  @include m.tablet {
+    background-position: center;
+    background-size: cover;
+    height: 60rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  
+  &__titulo{
+    text-align: center;
+    color: v.$negro;
+    @include m.tablet {
+      color: v.$blanco;
+    }
+   
+  }
+}
+
+.search-bar{
+  border: 1px solid #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .8rem;
+  border-radius: .5rem;
+  width: fit-content;
+  margin-top: 5rem;
+  align-items: center;
+  
+  @include m.tablet {
+    border: none;
+    background-color: v.$blanco;
+  }
+  
+
+  &__icon{
+    margin-left: 8px;
+    font-size: 16px;
+  }
+
+  &__input{
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: .8rem 1.2rem;
+    font-size: 1.4rem;
+    color: v.$marron;
+    flex-grow: 1;
+  }
+
+  &__button{
+    background-color: v.$naranja;
+    color: v.$negro;
+    border: none;
+    border-radius: 2rem;
+    padding: .8rem 1.6rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.4rem;
+    transition: background-color 0.3s ease;
+  }
+}

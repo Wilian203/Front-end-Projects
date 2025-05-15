@@ -1,0 +1,93 @@
+header{
+    background-image: url(/img/header.bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 600px;
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 0;
+        font-family: 'Poppins',sans-serif;
+        font-size: 14px;
+
+    
+        
+        .logo{
+            font-size: 18px;
+            text-decoration: none;
+            color: #000;
+            .bold{
+                font-weight: bold;
+            }
+        }
+        
+        .enlaces{
+            margin-right: 2rem;
+        }
+    }
+
+    .header__titulo{
+        font-family: "Poppins",sans-serif;
+        font-weight: bold;
+        margin-bottom: 20px;
+        line-height: 50px;
+        .bold__verde{
+            color: #008374;
+            font-weight: bold;
+            font-family: "Poppins",sans-serif;
+        }
+    }
+
+    .header__imagen{
+        border-radius: 5px;
+        box-shadow: 11px 8px 26px -17px rgba(0,0,0,0.75);
+    }
+
+    .header__subtitulo{
+        display: flex;
+        align-items: center;
+       hr{
+            width: 15rem;
+            height: 2px;
+            margin-left: 10px;
+            background-color: #000;
+            border-style: none;
+            margin-top: 10px;
+       }
+       h2{
+            font-size: 20px;
+            font-family: 'Poppins',sans-serif;
+            text-transform: uppercase;
+            font-weight: normal;
+       }
+    }
+
+    .header__parrafo{
+        font-family: "Poppins",sans-serif;
+        color: #6A737B;
+        margin-bottom: 20px;
+    }
+
+    .header__btn{
+        background-color: #024D45;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-family: "Poppins",sans-serif;
+        border-radius: 5px;
+        display: inline-block;
+        a{
+            text-decoration: none;
+            color: #ffff;
+        }
+    }
+
+    .header__contenido{
+        opacity:0 ;
+        position: relative;
+        top: 50px;
+        transition: opacity 0.5s ease-out, top 0.5s ease-out;
+    }
+    
+}

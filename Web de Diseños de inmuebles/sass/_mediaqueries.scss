@@ -1,0 +1,303 @@
+@media (min-width: 768px){
+  
+    header{
+        background-image: none;
+    }
+  
+  
+    main{
+        .thumbs{
+            .swiper-wrapper{
+                .swiper-slide{
+                    img{
+                        max-width: 220px;
+                    }
+                }
+            }
+        }
+
+        .seccion-1{
+            margin-top: 20rem;
+
+            .imagen-1,
+            .imagen-2{
+                margin: 2rem 0;
+                width: 100%;
+
+                
+            }
+        }
+
+        .seccion-4{
+            .contenedor{
+                .informacion{
+                  text-align: center;
+                  margin-right: 25.5rem;
+                  margin-top: -4rem;
+
+                  .comillas{
+                    text-align: left;
+                    margin-left: 2rem;
+                  }
+                }
+            }
+           
+        }
+   }
+}
+
+@media(min-width:1024px){
+    header{
+        background-image: url(/img/header.bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 600px;
+    }
+
+    main{
+        .seccion-1{
+            margin: 0 auto;
+            .imagen-1{
+                width: 500px;
+                vertical-align: top;
+                border-radius: 5px;
+                box-shadow: 11px 8px 26px -17px rgba(0,0,0,0.75);
+               
+            }
+            .imagen-2{
+                width: 500px;
+                border-radius: 5px;
+                vertical-align: top;
+                margin-top: -300px;
+                margin-left: 50px;
+                box-shadow: 11px 8px 26px -17px rgba(0,0,0,0.75);
+            }
+        }
+
+        .seccion-4{
+            .contenedor{
+                .informacion{
+                  text-align: left;
+                  margin-right: 0;
+                  margin-top: 0;
+                  
+
+                  .comillas{
+                    margin: 0;
+                  }
+                }
+            }
+           
+        }
+
+        
+    }
+}
+
+@media(max-width:460px){
+    header{
+        background-image: none;
+        margin-bottom: 10rem;
+       nav{
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           margin-bottom: -2rem;
+            
+            .logo{
+                font-size: 20px;
+            }
+            .nav__enlaces{
+                display: none;
+            }
+
+            .nav-link{
+                display: none;
+            }
+
+            .fa-phone{
+                display: none;
+            }
+
+            
+       }
+
+       .header__contenido{
+        
+          .header__titulo{
+            text-align: center;
+          }
+
+          hr{
+            display: none;
+          }
+
+          .header__parrafo{
+            text-align: center;
+            line-height: 25px;
+            font-size: 12px;
+          }
+
+
+          .header__btn{
+            padding: 5px 5px;
+            text-align: center;
+            display: block;
+
+            &:hover{
+                cursor: pointer;
+            }
+           
+
+           a{
+                &.hover{
+                    cursor: pointer;
+                }
+           }
+
+          }
+
+          .header__imagen{
+            margin-top: 2rem;
+          }
+       }
+
+       .header__subtitulo{
+            display: block;
+            text-align: center;
+            border-bottom: 1px solid #c2c2c2;
+            margin-bottom: 2rem;
+            
+       }
+    }
+
+    .seccion-1{
+         margin-top: -6rem;
+        .seccion-1__imaganes{
+          .imagen-1{
+            margin-bottom:2rem;
+          }
+          .imagen-2{
+            margin-top: 0;
+            margin-left: 0;
+          }
+        }
+
+        .seccion-1__contenido{
+            text-align: center;
+            margin-bottom: 2rem;
+            margin-left: 80px;
+           
+
+            .seccion1__subtitulo{
+                display: block;
+                text-align: center;
+                border-bottom: 1px solid #c2c2c2;
+                margin-bottom: 2rem;
+                hr{
+                    display: none;
+                }
+
+                h3{
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .seccion1__titulo{
+                font-size: 25px;
+            }
+
+            .seccion1__parrafo{
+                font-size: 15px;
+                text-align: center;
+                line-height: 30px;
+            }
+        }
+    }
+
+    .seccion-2{
+        margin-top: -8rem;
+        .seccion-2__contenido{
+
+            .set-1{
+                margin-bottom: 4rem;
+            }
+    
+            .set-2{
+                margin-bottom: 4rem;
+            }
+    
+            .set-3{
+                margin-bottom: 4rem;
+            }
+        }
+    }
+
+   
+
+    main{
+        .seccion-3{
+            margin-top: -9rem;
+    }
+
+        .arrows{
+            margin-top: 1rem;
+            
+        }
+
+        
+    }
+
+  .seccion-4 {
+    margin-top: -6rem;
+        .contenedor {
+            flex-direction: column;
+
+            .contenedor-img{
+               margin-top: -4rem;
+                img{
+                   display: none;
+                }
+            }
+
+            .linea-horizontal{
+                display: none;
+            }
+
+            .informacion {
+                text-align: center;
+              
+                padding: 10px;
+
+                .comillas{
+                    text-align: left;
+                }
+
+                h2 {
+                    font-size: 1.2em;
+                }
+
+                .descripcion {
+                    font-size: 0.9em;
+                }
+
+                .nombre__cliente {
+                    font-size: 1em;
+                }
+
+                .valoracion__cliente {
+                    font-size: 0.9em;
+                }
+            }
+        }
+    }
+
+
+    .seccion-5{
+        margin-top: -8rem;
+        .seccion-5__informacion{
+            margin-bottom: 2rem;
+        }
+    }
+}

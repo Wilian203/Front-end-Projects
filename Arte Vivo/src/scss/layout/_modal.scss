@@ -1,0 +1,44 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.modal{
+    position: fixed;
+    top: 20px;
+    right: -100%;
+    width: 200px;
+
+    background-color: var(--beige);
+    color: var(--negro);
+    border: 2px solid var(--marron);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    z-index: 1000;
+    opacity: 0;
+    transition: right 0.6s ease-out, opacity 0.6s ease-out;
+    padding: 20px;
+
+    font-family: sans-serif;
+
+   &__titulo{
+    color: v.$naranja;
+    margin: 0 0 10px;
+
+   }
+
+   &__texto{
+        margin: 0;
+
+        @include m.tablet {
+            font-size: 0.9rem;
+        }
+   }
+
+   
+
+   &.show{
+        right: 20px;
+        opacity: 1;
+   }
+
+
+}

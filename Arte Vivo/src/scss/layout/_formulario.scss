@@ -1,0 +1,56 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+.formulario{
+    width: 100%;
+    @include m.tablet {
+        max-width: 50%;
+        width: 100%;
+    }
+   
+    fieldset{
+        border: none;
+    }
+
+    legend{
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+    
+    &__campo{
+        margin-bottom: 2rem;
+    }
+
+    &__input,
+    &__textarea{
+        width: 100%;
+        font-size: 1rem;
+        padding: 1rem;
+        border-radius: .5rem;
+        border: 1px solid v.$marron;
+    }
+
+    &__textarea{
+        height: 20rem;
+    }
+    
+    &__button{
+        background-color: v.$naranja;
+        border: none;
+        font-size: 1rem;
+        border-radius: 2rem;
+        padding: 1rem 2rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+}
+
+.alinear-derecha{
+    display: flex;
+    justify-content: end;
+}

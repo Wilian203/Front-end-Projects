@@ -1,0 +1,40 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.testimoniales{
+    text-align: center;
+    @include m.tablet {
+        text-align: left;
+    }
+
+    &__contenido{
+        margin-bottom: 4rem;
+
+        @include m.tablet {
+            margin-bottom: 0;
+        }
+    }
+    
+    &__contenedor{
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            column-gap: 2rem;
+        }
+    }
+
+    &__fecha{
+        font-size: 1.5rem;
+        color: v.$marron;
+        margin: 0;
+    }
+
+    &__parrafo{
+        color: v.$marron;
+        font-weight: 300;
+    }
+
+    &__imagen{
+        border-radius: 2rem;
+    }
+}

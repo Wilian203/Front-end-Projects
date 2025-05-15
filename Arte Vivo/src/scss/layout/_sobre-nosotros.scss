@@ -1,0 +1,12 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.sobre-nosotros{
+    text-align: center;
+    @include m.tablet {
+        text-align: left;
+    }
+    &__texto{
+        font-weight: 300;
+    }
+}

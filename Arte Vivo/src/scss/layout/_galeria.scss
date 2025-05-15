@@ -1,0 +1,30 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.galeria{
+    &__imagenes{
+        margin-bottom: 2rem;
+        @include m.tablet {
+            @include m.grid(4,2rem);
+        }
+
+        img{
+            object-fit: cover;
+            height: 20rem;
+            border-radius: 2rem;
+            margin-bottom: 2rem;
+            @include m.tablet{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__titulo{
+        text-align: center;
+
+        @include m.tablet {
+            text-align: left;
+        }
+    }
+}

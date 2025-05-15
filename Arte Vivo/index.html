@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+      crossorigin="crossorigin"
+      as="font"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="build/css/app.css" as="style" />
+    <link rel="stylesheet" href="build/css/app.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Arte Vivo</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__logo">
+        Arte<span class="header__logo-normal">Vivo</span>
+      </h1>
+
+      <nav class="navegacion">
+        <a href="#" class="navegacion__link">Home</a>
+        <a href="#" class="navegacion__link">Products</a>
+        <a href="#" class="navegacion__link">About Us</a>
+        <a href="#" class="navegacion__link">Contact</a>
+        <a href="#" class="navegacion__link">Cart</a>
+        <a href="#" class="navegacion__link bg">
+          <img
+            class="navegacion__link-img"
+            loading="lazy";
+            src="./build/img/user.webp"
+            alt="user"
+          />
+        </a>
+      </nav>
+    </header>
+
+    <section class="contenedor">
+      <div class="hero">
+        <div class="hero__contenido">
+          <h2 class="hero__titulo no-margin">
+            Descubra las artesanías hechas a mano más bellas del mundo.
+          </h2>
+        </div>
+
+        <div class="search-bar">
+            <div class="search-bar__icon">
+                <i class="fa-solid fa-magnifying-glass" style="color: #966e4f;"></i>
+            </div>
+            <input type="text" class="search-bar__input" placeholder="Search for crafts">
+            <button class="search-bar__button">Search</button>
+        </div>
+          
+      </div>
+    </section>
+
+    <section class="galeria contenedor">
+      <h2 class="galeria__titulo">Nuestros Productos</h2>
+      <div class="galeria__imagenes"></div>
+    </section>
+
+    <section class="contenedor sobre-nosotros">
+      <h3 class="sobre-nosotros__titulo no-margin">Sobre Nosotros</h3>
+      <p class="sobre-nosotros__texto">
+        ArteVivo es el mercado líder de productos artesanales. Nuestra misión es
+        conectar a las personas con artículos hermosos y únicos de todo el
+        mundo, a la vez que apoyamos a los artesanos locales y celebramos la
+        diversidad de la creatividad humana. Ya sea que busques un regalo único
+        o una pieza especial para tu hogar, aquí la encontrarás.
+      </p>
+    </section>
+
+    <section class="testimoniales contenedor">
+      <h3 class="testimoniales__titulo">Testimoniales</h3>
+
+      <div class="testimoniales__contenido">
+        <p class="testimoniales__fecha">Hace 5 dias</p>
+        <div class="testimoniales__contenedor">
+          <div class="testimoniales__informacion">
+            <h4 class="no-margin">Hermosos Productos</h4>
+            <p class="testimoniales__parrafo">
+              Pedí un juego de vasos de vidrio soplado a mano y son absolutamente
+              impresionantes. La artesanía es de primera calidad y se ven aún
+              mejor en persona que en las fotos. Estoy muy impresionada con la
+              calidad y la atención al detalle.
+            </p>
+          </div>
+         <picture >
+          <source loading="lazy" srcset = "build/img/cliente-1.avif"type="image/avif" class="testimoniales__imagen" alt="cliente">
+          <source loading ="lazy" srcset = "build/img/cliente-1.webp"type="image/webp" class="testimoniales__imagen" alt="cliente">
+          <img loading ="lazy" src="build/img/cliente-1.jpg"width ="500"height ="300" class="testimoniales__imagen" alt="cliente">
+         </picture>
+        </div>
+      </div>
+      <!-- testomoniales__contenido -->
+
+      <div class="testimoniales__contenido">
+        <p class="testimoniales__fecha">Hace dos semanas</p>
+        <div class="testimoniales__contenedor">
+            <div class="testimoniales__informacion">
+                <h4 class="no-margin">Excelente Servicio</h4>
+                <p class="testimoniales__parrafo ">
+                  Tenía algunas preguntas sobre un producto y el equipo de atención al
+                  cliente de ArteVivo fue increíblemente servicial. Respondieron
+                  rápidamente y me brindaron toda la información que necesitaba. Es
+                  evidente que se preocupan por sus clientes y se dedican a brindar
+                  una experiencia de compra positiva.
+                </p>
+            </div>
+            <picture class="testimoniales__imagen">
+              <source loading ="lazy" srcset = "build/img/cliente-2.avif"type="image/avif"class="testimoniales__imagen" alt="cliente">
+              <source loading ="lazy" srcset = "build/img/cliente-2.webp"type="image/webp"class="testimoniales__imagen" alt="cliente">
+              <img loading ="lazy" src="build/img/cliente-2.jpg"width ="500"height ="300"class="testimoniales__imagen" alt="cliente">
+             </picture>
+        </div>
+      </div>
+      <!-- testomoniales__contenido -->
+    </section>
+
+    <section class="contenedor contacto">
+        <form action="#" class="formulario">
+            <fieldset>
+                <legend>Concat us</legend>
+                <div class="formulario__campos">
+                    <div class="formulario__campo">
+                        <input type="text" name="nombre" id="nombre" class="formulario__input" placeholder="Your name">
+                    </div>
+
+                    <div class="formulario__campo">
+                        <input type="email" name="email" id="email" class="formulario__input" placeholder="Your email">
+                    </div>
+
+                    <div class="formulario__campo">
+                        <textarea name="mensaje" id="mensaje" class="formulario__textarea"></textarea>
+                    </div>
+                    <div class="alinear-derecha">
+                      <button type="submit" class="formulario__button ">Send Message</button>
+                    </div>
+                   
+                </div>
+            </fieldset>
+        </form>
+    </section>
+
+    <div id="mensajeModal" class="modal">
+      <div class="modal__content">
+        <h2 class="modal__titulo">Mensaje enviado</h2>
+        <p class="modal__texto">Su mensaje ha sido enviado correctamente.</p>
+      </div>
+    </div>
+    
+
+    <footer class="footer contenedor">
+      <nav class="navegacion">
+        <a href="#" class="navegacion__link--marron">Home</a>
+        <a href="#" class="navegacion__link--marron">Products</a>
+        <a href="#" class="navegacion__link--marron">About Us</a>
+        <a href="#" class="navegacion__link--marron">Contact</a>
+      </nav>
+
+      <div class="footer__redes">
+        <i class="fa-brands fa-instagram" style="color: #96634f;"></i>
+        <i class="fa-brands fa-x-twitter" style="color: #966e4f;"></i>
+        <i class="fa-brands fa-facebook"  style="color: #966e4f;"></i>
+      </div>
+    </footer>
+
+    <script src="src/js/modernizr.js"></script>
+    <script src="build/js/app.js"></script>
+  </body>
+</html>
