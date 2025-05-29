@@ -1,0 +1,70 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.lineup{
+    background-color: v.$rosa;
+
+    h3{
+        color: v.$blanco;
+    }
+
+    .dia{
+        text-align: center;
+        color: v.$blanco;
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+}
+
+.escenarios-contenedor{
+    @include m.tablet {
+        @include m.grid(2)
+    }
+}
+
+.escenario{
+    padding-top: 2rem;
+    .nombre-escenario{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 3rem;
+    }
+}
+
+.calendario{
+    @include m.resetear-lista;
+    li{
+        padding: 2.5rem;
+        font-weight: 700;
+        span{
+            font-weight: 400;
+        }
+    }
+}
+
+.bg-amarillo{
+    background-color: v.$amarillo;
+    margin-bottom: 2rem;
+    @include m.tablet {
+        margin-bottom: 0;
+    }
+    // el parametro odd se utiliza para que coloque el color de manera inpar es decir a uno si y a otro no.
+    li:nth-child(odd){
+        // la funciin lighten sirve para aclarar
+        background-color: lighten(v.$amarillo, 5%);
+    }
+}
+
+.bg-verde{
+    background-color: v.$verde;
+    li:nth-child(odd){
+        background-color: lighten(v.$verde, 5%);
+    }
+    margin-bottom: 2rem;
+    @include m.tablet {
+        margin-bottom: 0;
+    }
+}
+  
+   
