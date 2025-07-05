@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      crossorigin="crossorigin"
+      as="font"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="build/css/app.css" as="style" />
+    <link rel="stylesheet" href="build/css/app.css" />
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>Burguer Bliss</title>
+  </head>
+  <body>
+    <header class="contenedor header">
+      <div class="header__logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path
+            fill="#ffff"
+            d="M61.1 224C45 224 32 211 32 194.9c0-1.9 .2-3.7 .6-5.6C37.9 168.3 78.8 32 256 32s218.1 136.3 223.4 157.3c.5 1.9 .6 3.7 .6 5.6c0 16.1-13 29.1-29.1 29.1L61.1 224zM144 128a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zm240 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32zM272 96a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zM16 304c0-26.5 21.5-48 48-48l384 0c26.5 0 48 21.5 48 48s-21.5 48-48 48L64 352c-26.5 0-48-21.5-48-48zm16 96c0-8.8 7.2-16 16-16l416 0c8.8 0 16 7.2 16 16l0 16c0 35.3-28.7 64-64 64L96 480c-35.3 0-64-28.7-64-64l0-16z"
+          />
+        </svg>
+        <h1 class="header___titulo m-0">Burguer<span>Bliss</span></h1>
+      </div>
+
+      <nav class="navegacion">
+        <a href="#" class="navegacion__enlace">Inicio</a>
+        <a href="#" class="navegacion__enlace">Nuestro Menú</a>
+        <a href="#" class="navegacion__enlace">Información</a>
+        <a href="#" class="navegacion__enlace">Contácto</a>
+
+        <div class="cart-container">
+          <!-- Icono de carrito (SVG) -->
+          <svg
+            class="cart-icon"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437m0 0l1.669 6.261a3 3 0 002.9 2.216h7.38a3 3 0 002.9-2.216l1.334-5a1.5 1.5 0 00-1.45-1.934H6.18m-.074 0L5.25 3.75m1.5 16.5a.75.75 0 100-1.5.75.75 0 000 1.5zm10.5 0a.75.75 0 100-1.5.75.75 0 000 1.5z"
+            ></path>
+          </svg>
+
+          <!-- Contenido desplegable del carrito -->
+          <div class="cart-dropdown" id="carrito">
+            <table id="lista-carrito">
+              <thead>
+                <tr>
+                  <th>Imagen</th>
+                  <th>Nombre</th>
+                  <th>Precio</th>
+                  <th>Cantidad</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <a href="#" class="empty-cart-btn" id="vaciar-carrito"
+              >Vaciar Carrito</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="contenedor slider">
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slider__grid">
+              <div class="slider__contenido">
+                <h2 class="slider__titulo m-0">Hambuerguesa</h2>
+                <p class="slider__parrafo">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <div class="slider__botones">
+                  <a href="#" class="slider__btn">Compra</a>
+                  <a href="#" class="slider__btn">Menu</a>
+                </div>
+              </div>
+              <!-- slider-contenido -->
+              <div class="slider__imagen">
+                <picture>
+                  <source
+                    srcset="build/img/hambuerguesa-removebg-preview.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="build/img/hambuerguesa-removebg-preview.png"
+                    width="500"
+                    height="300"
+                  />
+                </picture>
+              </div>
+            </div>
+            <!-- slider-grid -->
+          </div>
+          <!-- slide -->
+          <div class="swiper-slide">
+            <div class="slider__grid">
+              <div class="slider__contenido">
+                <h2 class="slider__titulo m-0">Tacos</h2>
+                <p class="slider__parrafo">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <div class="slider__botones">
+                  <a href="#" class="slider__btn">Compra</a>
+                  <a href="#" class="slider__btn">Menu</a>
+                </div>
+              </div>
+              <!-- slider-contenido -->
+              <div class="slider__imagen">
+                <picture>
+                  <source
+                    srcset="build/img/tacos-removebg-preview.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="build/img/tacos-removebg-preview.png"
+                    width="500"
+                    height="300"
+                  />
+                </picture>
+              </div>
+            </div>
+            <!-- slider-grid -->
+          </div>
+          <!-- slide -->
+          <div class="swiper-slide">
+            <div class="slider__grid">
+              <div class="slider__contenido">
+                <h2 class="slider__titulo m-0">Pizzas</h2>
+                <p class="slider__parrafo">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <div class="slider__botones">
+                  <a href="#" class="slider__btn">Compra</a>
+                  <a href="#" class="slider__btn">Menu</a>
+                </div>
+              </div>
+              <!-- slider-contenido -->
+              <div class="slider__imagen">
+                <picture>
+                  <source
+                    srcset="build/img/pizza-min-removebg-preview.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="build/img/pizza-min-removebg-preview.png"
+                    width="500"
+                    height="300"
+                  />
+                </picture>
+              </div>
+            </div>
+            <!-- slider-grid -->
+          </div>
+          <!-- slide -->
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </section>
+
+    <main class="contenedor menu" id="lista-productos">
+      <h2 class="menu__titulo">Nuestro menú</h2>
+
+      <div class="menu__grid">
+        <div class="menu__contenido" >
+          <div class="menu__imagen">
+            <picture>
+              <source
+                srcset="build/img/classicBurguer.webp"
+                type="image/webp"
+              />
+              <img
+                loading="lazy"
+                src="build/img/classicBurguer.jpg"
+                width="500"
+                height="300"
+              />
+            </picture>
+          </div>
+          <div class="menu__info">
+            <h3>Hambuerguesa Clasica</h3>
+            <p>$20</p>
+            <a href="#" class="menu__btn agregar-carrito" data-id="1">Agregar al carrito</a>
+          </div>
+        </div>
+        <!-- menu-contenido -->
+
+        <div class="menu__contenido" >
+          <div class="menu__imagen">
+            <picture>
+              <source srcset="build/img/chesseBurguer.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="build/img/chesseBurguer.jpg"
+                width="500"
+                height="300"
+              />
+            </picture>
+          </div>
+          <div class="menu__info">
+            <h3>Hambuerguesa de Queso</h3>
+            <p>$50</p>
+            <a href="#" class="menu__btn agregar-carrito" data-id="2">Agregar al carrito</a>
+          </div>
+        </div>
+        <!-- menu-contenido -->
+
+        <div class="menu__contenido" >
+          <div class="menu__imagen">
+            <picture>
+              <source srcset="build/img/comboBurguer.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="build/img/comboBurguer.jpg"
+                width="500"
+                height="300"
+              />
+            </picture>
+          </div>
+          <div class="menu__info">
+            <h3>Combo Clasico</h3>
+            <p>$70</p>
+            <a href="#" class="menu__btn agregar-carrito" data-id="3">Agregar al carrito</a>
+          </div>
+        </div>
+        <!-- menu-contenido -->
+
+        <div class="menu__contenido" >
+          <div class="menu__imagen">
+            <picture>
+              <source srcset="build/img/comboBurguer2.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="build/img/comboBurguer2.jpg"
+                width="500"
+                height="300"
+              />
+            </picture>
+          </div>
+          <div class="menu__info">
+            <h3>Combo Exótico</h3>
+            <p>$120</p>
+            <a href="#" class="menu__btn agregar-carrito" data-id="4">Agregar al carrito</a>
+          </div>
+        </div>
+        <!-- menu-contenido -->
+
+        <div class="menu__contenido" >
+          <div class="menu__imagen">
+            <picture>
+              <source srcset="build/img/tacoCarne.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="build/img/tacoCarne.jpg"
+                width="500"
+                height="300"
+              />
+            </picture>
+          </div>
+          <div class="menu__info">
+            <h3>Taco de Carne</h3>
+            <p>$90</p>
+            <a href="#" class="menu__btn agregar-carrito" data-id="5">Agregar al carrito</a>
+          </div>
+        </div>
+        <!-- menu-contenido -->
+
+        <div class="menu__contenido" >
+          <div class="menu__imagen">
+            <picture>
+              <source srcset="build/img/Beef-Tacos-55.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="build/img/Beef-Tacos-55.jpg"
+                width="500"
+                height="300"
+              />
+            </picture>
+          </div>
+          <div class="menu__info">
+            <h3>Taco de Beft</h3>
+            <p>$100</p>
+            <a href="#" class="menu__btn agregar-carrito" data-id="6">Agregar al carrito</a>
+          </div>
+        </div>
+        <!-- menu-contenido -->
+
+        <div class="menu__contenido" >
+          <div class="menu__imagen">
+            <picture>
+              <source srcset="build/img/comboTaco.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="build/img/comboTaco.jpg"
+                width="500"
+                height="300"
+              />
+            </picture>
+          </div>
+          <div class="menu__info">
+            <h3>Combo el Sabor</h3>
+            <p>$150</p>
+            <a href="#" class="menu__btn agregar-carrito" data-id="7">Agregar al carrito</a>
+          </div>
+        </div>
+        <!-- menu-contenido -->
+
+        <div class="menu__contenido" >
+          <div class="menu__imagen">
+            <picture>
+              <source
+                srcset="build/img/pizzaPeperroni.webp"
+                type="image/webp"
+              />
+              <img
+                loading="lazy"
+                src="build/img/pizzaPeperroni.jpg"
+                width="500"
+                height="300"
+              />
+            </picture>
+          </div>
+          <div class="menu__info">
+            <h3>Pizza Peperroni</h3>
+            <p>$110</p>
+            <a href="#" class="menu__btn agregar-carrito" data-id="8">Agregar al carrito</a>
+          </div>
+        </div>
+        <!-- menu-contenido -->
+
+        <div class="menu__contenido" >
+          <div class="menu__imagen">
+            <picture>
+              <source srcset="build/img/pizzaQueso.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="build/img/pizzaQueso.jpg"
+                width="500"
+                height="300"
+              />
+            </picture>
+          </div>
+          <div class="menu__info">
+            <h3>Pizza Queso</h3>
+            <p>$120</p>
+            <a href="#" class="menu__btn agregar-carrito" data-id="9">Agregar al carrito</a>
+          </div>
+        </div>
+        <!-- menu-contenido -->
+
+        <div class="menu__contenido" >
+          <div class="menu__imagen">
+            <picture>
+              <source srcset="build/img/comboPizaa.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="build/img/comboPizaa.jpg"
+                width="500"
+                height="300"
+              />
+            </picture>
+          </div>
+          <div class="menu__info">
+            <h3>Combo delocious</h3>
+            <p>$250</p>
+            <a href="#" class="menu__btn agregar-carrito" data-id="10">Agregar al carrito</a>
+          </div>
+        </div>
+        <!-- menu-contenido -->
+      </div>
+      <!-- menu-grid -->
+    </main>
+
+    <section class="contenedor informacion">
+      <h2 class="informacion__titulo">Nuestras Sucursales</h2>
+      <div id="map" class="informacion__mapa"></div>
+
+      <h2 class="informacion__titulo">Información</h2>
+      <div class="informacion__grid">
+        <div class="informacion__horas">
+          <p class="informacion__hora">Horarios</p>
+          <p class="informacion__dias">Lunes - Domingo 11AM - 10PM</p>
+        </div>
+
+        <div class="informacion__contactos">
+          <p class="informacion__contacto">Numero de Contacto</p>
+          <p class="informacion__numero">+1-555-123-4567</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contenedor formulario">
+      <form class="formulario__contenedor" id="formulario">
+        <fieldset class="formulario__fieldset">
+            <legend class="formulario__legend">Contáctanos</legend>
+            <div class="formulario__campo">
+                <label class="formulario__label" for="email">Email</label>
+                <input class="formulario__input" type="email" id="email" name="email" placeholder="ej: correo@correo.com">
+            </div>
+
+            <div class="formulario__campo">
+                <label class="formulario__label" for="asunto">Asunto</label>
+                <input class="formulario__input" type="text" id="asunto" name="asunto" placeholder="Queja, Pregunta, Idea">
+            </div>
+
+             <div class="formulario__campo">
+                <label class="formulario__label" for="mensaje">Mensaje</label>
+               <textarea class="formulario__textarea" name="mensaje" id="mensaje" placeholder="Mensaje"></textarea>
+            </div>
+
+            <div class="formulario__botones">
+                 <button class="formulario__boton" id="boton-enviar" type="submit" disabled>Enviar</button>
+                 <button class="formulario__boton" id="boton-resetar" type="reset">Limpiar</button>
+            </div>
+
+             <div id="spinner" class="snniper__container">
+                    <div class="sk-chase">
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                    </div>
+              </div>
+
+        </fieldset>
+      </form>
+    </section>
+
+    <footer class="contenedor footer">
+      <p>Todos los derechos reservados &copy;Wilian Mariñez</p>
+    </footer>
+
+    <script src="build/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  </body>
+</html>

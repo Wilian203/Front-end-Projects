@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" href="build/css/app.css" as="style" />
+    <link rel="stylesheet" href="build/css/app.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>CineSearch</title>
+  </head>
+  <body>
+    <header class="header contenedor">
+      <div class="header__logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path
+            fill="#ffffff"
+            d="M0 96C0 60.7 28.7 32 64 32l384 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM48 368l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM48 240l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM48 112l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16L64 96c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM160 128l0 64c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32L192 96c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32l0 64c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32l-128 0z"
+          />
+        </svg>
+        <h1 class="header__titulo">Cine<span>Search</span></h1>
+      </div>
+
+      <div class="header__login">
+        <div class="header__user-icon">
+          <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              fill="#ffffff"
+              d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"
+            />
+          </svg>
+        </div>
+        <!-- icon -->
+         <div class="header__user">
+            <picture>
+                <source srcset = "build/img/user.webp"type="image/webp">
+                <img class="header__img" loading ="lazy" src=".jpg"width ="500"height ="300">
+            </picture>
+         </div>
+      </div>
+      <!-- login -->
+    </header>
+
+    <main class="contenedor contenido">
+        <h2 class="contenido__titulo">Encuentra tu próxima película</h2>
+        <form id="buscador" class="formulario">
+            <div class="formulario__campo">
+               <select class="formulario__select" id="titulo">
+                    <option value="">Peliculas Disponibles</option>
+                </select>
+            </div>
+
+            <div class="formulario__campo">
+                <select class="formulario__select" id="categoria">
+                    <option value="">Seleccionar Categoria</option>
+                    <option value="accion">Accion</option>
+                    <option value="ciencia ficcion">Ciencia Ficcion</option>
+                    <option value="aventura">Aventura</option>
+                </select>
+            </div>
+
+              <div class="formulario__campo">
+                <select class="formulario__select" id="year">
+                    <option value="">Seleccionar Año</option>
+                </select>
+            </div>
+        </form>
+
+        <div class="contenido__grid" id="peliculas"></div>
+        <div id="mensaje"></div>
+    </main>
+
+    <footer class="footer contenedor"><p>Todos los derecho reservados &copy;Wilian Mariñez</p></footer>
+
+    <script src="build/js/peliculasDB.js"></script>
+    <script src="build/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.informacion {
+  @include m.separacion;
+  &__titulo {
+    margin-bottom: 3rem;
+    color: v.$blanco;
+    @include m.borde;
+
+        &:last-of-type{
+            margin-top: 5rem;
+        }
+  }
+
+  &__mapa {
+      height: 500px;
+      border: 1px solid v.$blanco;
+      border-radius: 16px;
+      overflow: hidden;
+  }
+
+  &__grid{
+    margin-top: 5rem;
+    @include m.tablet {
+        @include m.grid(2,2rem);
+        align-items: center;
+    }
+  }
+
+  &__horas,
+  &__contactos{
+    border-top: 1px solid lighten(v.$gris, 10);
+    color: v.$blanco;
+  }
+
+  &__hora,
+  &__contacto{
+    color: #ababab;
+    font-weight: 700;
+  }
+
+  &__dias,
+  &__numero{
+    font-weight: 300;
+  }
+
+}

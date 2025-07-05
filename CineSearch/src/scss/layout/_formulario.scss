@@ -1,0 +1,23 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.formulario{
+    &__campo{
+        max-width: 70rem;
+        margin-bottom: 3rem;
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+
+    &__select{
+        width: 100%;
+        padding: 1.5rem;
+        background-color: v.$grisOscuro;
+        border: none;
+        border-radius: 1rem;
+        color: v.$blanco;
+    }
+    
+}

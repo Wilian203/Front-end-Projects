@@ -1,0 +1,15 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer{
+   @include m.separacion;
+   border-top: 1px solid v.$blanco;
+
+   p{
+        text-align: center;
+        margin: 0;
+        color:lighten(v.$grisOscuro, 20);
+   }
+
+
+}
