@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="preload" href="build/css/app.css" as="style" />
+    <link rel="stylesheet" href="build/css/app.css" />
+
+    <!-- fuente -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      crossorigin="crossorigin"
+      as="font"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>TechStore</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__contenido contenedor">
+        <h1 class="header__titulo">
+          Tech<span class="header__titulo-bold">Store</span>
+        </h1>
+        <div class="header__flex">
+          <nav class="navegacion">
+            <a
+              class="navegacion__enlace navegacion__enlace--active"
+              id="todo"
+              data-categoria=""
+              href="#"
+              >Todo</a
+            >
+            <a
+              class="navegacion__enlace"
+              id="camara"
+              data-categoria="camara"
+              href="#"
+              >Camaras</a
+            >
+            <a
+              class="navegacion__enlace"
+              id="consola"
+              data-categoria="consola"
+              href="#"
+              >Consolas</a
+            >
+            <a
+              class="navegacion__enlace"
+              id="monitor"
+              data-categoria="monitor"
+              href="#"
+              >Monitores</a
+            >
+            <a
+              class="navegacion__enlace"
+              id="portatil"
+              data-categoria="notebook"
+              href="#"
+              >Portatiles</a
+            >
+          </nav>
+
+          <div class="header__grupo">
+            <div class="header__carrito">
+              <svg
+                class="header__cart"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
+                />
+              </svg>
+              <!-- Carrito desplegable -->
+              <div class="cart-dropdown">
+                <table class="cart-table" id="carrito">
+                  <thead>
+                    <tr>
+                      <th>Imagen</th>
+                      <th>Título</th>
+                      <th>Precio</th>
+                      <th>Cantidad</th>
+                      <th>Eliminar</th>
+                    </tr>
+                  </thead>
+                  <tbody id="lista-carrito">
+                    <!-- Más filas dinámicas -->
+                  </tbody>
+                </table>
+                <!-- Botón para vaciar el carrito -->
+                <button class="clear-cart-btn" id="vaciar-carrito">
+                  Vaciar carrito
+                </button>
+              </div>
+            </div>
+
+            <svg
+              class="header__svg"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+              />
+            </svg>
+            <input
+              type="text"
+              id="entrada"
+              class="header__input"
+              placeholder="Buscar"
+            />
+          </div>
+        </div>
+        <!-- flex -->
+      </div>
+      <!-- contenido -->
+    </header>
+
+    <main class="contenedor">
+      <div class="productos" id="lista-productos"></div>
+      <div id="mensaje"></div>
+    </main>
+
+    <script src="build/js/techDB.js"></script>
+    <script src="build/js/app.js"></script>
+  </body>
+</html>

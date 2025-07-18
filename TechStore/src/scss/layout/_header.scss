@@ -1,0 +1,152 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header{
+    background-color: v.$grisOscuro;
+    &__contenido{
+        @include m.separacion;
+    }
+    &__titulo{
+        font-weight: 300;
+        text-align: center;
+    }
+
+    &__titulo-bold{
+        font-weight: 700;
+        color: v.$naranja;
+    }
+
+    &__flex{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        @include m.tablet {
+            justify-content: space-between;
+            flex-direction: row;
+        }
+    }
+
+    &__grupo{
+        position: relative;
+    }
+    &__carrito{
+        position: relative;
+    }
+    &__input{
+      padding: 1rem 1rem 1rem 3rem;
+      font-size: 2rem;
+      font-weight: 300;
+      border-radius: .5rem;
+      border: 1px solid #e1e1e1;
+    }
+
+    &__svg{
+        position: absolute;
+        left: 10px;   /* o right: 10px si lo quieres al otro lado */
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+        fill: #666;
+        pointer-events: none; /* para no interferir con el click en el input */
+
+    }
+
+    &__cart{
+        position: absolute;
+        top: -24rem;
+        left: 12.2rem;
+        @include m.tablet {
+            top: -9rem;
+            left: unset;
+            right: 0;
+        }
+    }
+}
+
+.cart-dropdown {
+    display: none;
+    position: absolute;
+    top: -4.5rem;
+     right: -6.6rem;
+    @include m.tablet {
+        top: -6.5rem;
+        right: unset;
+    }
+   
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 1rem;
+    z-index: 10;
+    width: 40rem;
+   
+
+    @include m.tablet {
+        right: 0;
+        left: -10.5rem;
+    }
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.4rem;
+
+    th, td {
+        padding: 0.5rem;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f5f5f5;
+    }
+    td{
+        font-size: 1rem;
+    }
+}
+
+.cart-img {
+    width: 50px;
+    height: auto;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #e60000;
+    }
+}
+
+.header__carrito:hover .cart-dropdown {
+    display: block;
+}
+
+.clear-cart-btn {
+    margin-top: 1rem;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: .5rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: #e60000;
+    }
+}
+

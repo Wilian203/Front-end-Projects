@@ -1,0 +1,28 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+
+    @include m.tablet {
+        flex-direction: row;
+        margin-bottom: 0;
+    }
+
+    &__enlace{
+        color: v.$negro;
+
+        &:hover{
+            color: v.$naranja;
+        }
+    }
+
+    &__enlace--active{
+        color: v.$naranja;
+    }
+}
