@@ -167,6 +167,7 @@ td img {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .footer{

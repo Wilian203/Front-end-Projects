@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 30px;
+}
+
+.form-container {
+  position: relative;
+  background-color: white;
+  max-width: 400px;
+  margin: auto;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 13px;
+}
+
+.btn-submit {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+ opacity: 0.5;
+}
+
+.btn-submit.activo {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #45a049;
+}
+  .mensaje-exito {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    position: absolute;
+    top: -60px; /* empieza arriba del formulario */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: mostrarYDesaparecer 4s ease forwards;
+    width: 90%;
+    max-width: 300px;
+    z-index: 10;
+  }
+
+  @keyframes mostrarYDesaparecer {
+    0% {
+      top: -60px;
+      opacity: 0;
+    }
+    20% {
+      top: 10px;
+      opacity: 1;
+    }
+    80% {
+      top: 10px;
+      opacity: 1;
+    }
+    100% {
+      top: -60px;
+      opacity: 0;
+    }
+  }
+

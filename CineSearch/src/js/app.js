@@ -56,7 +56,7 @@ function mostrarPeliculas(peliculas){
                 <h3 class="contenido__info-titulo">${nombre}</h3>
                 <p class="contenido__info-categoria">${categoria}</p>
                 <p class="contenido__info-year">${year}</p>
-            </div>
+          </div>
 
         `;
 
@@ -96,6 +96,8 @@ function mostrarSelectPeliculas(){
           
     });
 };
+
+
 
 function filtrarPeliculas(){
     const filtro = peliculas.filter(filtrarTitulo).filter(filtrarCategoria).filter(filtrarYear);

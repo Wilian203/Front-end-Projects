@@ -1,88 +1,91 @@
-// variabales
-const listaProductos = document.querySelector('#lista-productos');
+// variables
+const listaProductos = document.querySelector('#lista-productos')
 const tbody = document.querySelector('#lista-carrito tbody');
 const carrito = document.querySelector('#carrito');
-const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
 
-let carritoProductos = [];
+let articulos = [];
 
-eventos();
-function eventos(){
+
+// Eventos
+eventListeners();
+function eventListeners(){
     listaProductos.addEventListener('click', agregarProducto);
-    carrito.addEventListener('click', eliminarProducto)
-    vaciarCarritoBtn.addEventListener('click', () =>{
-        carritoProductos = [];
-        limpiarHTML();
-
-    })
+    carrito.addEventListener('click', eliminarProdcto);
 };
 
+// Funciones
 function agregarProducto(e){
-   e.preventDefault();  
+    e.preventDefault();
     if(e.target.classList.contains('agregar-carrito')){
-        const contenedorDelProducto = e.target.parentElement.parentElement;
-        informacionDelProducto(contenedorDelProducto);
+        informacionDelProducto(e.target.parentElement);
     };
+
+    
 };
+
+function eliminarProdcto(e){
+    if(e.target.classList.contains('borrar-producto')){
+        const botonId = e.target.getAttribute('data-id');
+        articulos = articulos.filter(articulo => articulo.id !== botonId);
+    };
+
+    carritoHTML();
+   
+}
 
 function informacionDelProducto(producto){
-   const infoProducto = {
+    const info = {
         imagen: producto.querySelector('img').src,
-        nombre: producto.querySelector('h3').textContent,
+        titulo: producto.querySelector('h3').textContent,
         precio: producto.querySelector('.precio').textContent,
         cantidad: 1,
-        id: producto.querySelector('.producto').getAttribute('data-id')
-   };
+       id: producto.getAttribute('data-id'),
+    };
 
-   const productoExiste = carritoProductos.find(producto => producto.id ===  infoProducto.id);
+    // Aumentamos la cantidad si existe un producto en el carrito y volvemos agregar el mismo
+    const existe = articulos.find(articulo => articulo.id === info.id);
+    if(existe){
+        existe.cantidad +=1;
+    }else{
+         // una vez tenga la informacion del producto lo agrego al carrito
+        articulos = [...articulos, info];
+    }
+   
 
-   if(productoExiste){
-      productoExiste.cantidad += 1;
-   }else{
-     carritoProductos = [...carritoProductos, infoProducto];
-   }
-
-   carritoHTML();
-  
-
-};
-
-function eliminarProducto(e){
-    e.preventDefault();
-  if(e.target.classList.contains('borrar-producto')){
-    const productoID = e.target.getAttribute('data-id');
-    // Uso filter en vez de find porque filter no crea un nuevo arreglo y al momento de agregar productos al arreglo nuevamente
-    // no me deja mientras que filter elimina el producto que deseo eliminar y me crear un nuevo arreglo
-    carritoProductos = carritoProductos.filter(producto => producto.id !== productoID);
+    // agregamos la info al html
     carritoHTML();
- 
-  };
+
 };
+
+
 
 function carritoHTML(){
     limpiarHTML();
-    carritoProductos.forEach(producto=>{
-        const{imagen, nombre, precio, cantidad, id} = producto;
+    // Recorremos el arreglo para ir agregando cada producto al td
+    articulos.forEach(producto=>{
+        // destructuramos el objeto
+        const{imagen, titulo, precio, cantidad, id} = producto;
+        // crear el td
         const tr = document.createElement('tr');
-        tr.innerHTML = `
+        tr.innerHTML =
+        `
         <td>
-            <img src="${imagen}"/>
+            <img loading="lazy" src= "${imagen}" alt="imagen">
         </td>
-        <td>${nombre}</td>
+        <td>${titulo}</td>
         <td>${precio}</td>
         <td>${cantidad}</td>
-         <td>
-            <a href="#" class="borrar-producto" data-id="${id}">X</a>
-        </td>
+        <td><a class="borrar-producto" data-id ="${id}">X</a></td>
+        
         `;
-
+        
+        // una vez estructurado el html lo agregamos al tbody
         tbody.appendChild(tr);
     });
 };
 
 function limpiarHTML(){
-    // forma rapida
-     while(tbody.firstChild) {
-          tbody.removeChild(tbody.firstChild);
-      };
+    while(tbody.firstChild){
+        tbody.removeChild(tbody.firstChild);
+    };
 };

@@ -1,0 +1,51 @@
+:root{
+    --bs-blue:#2BADEE;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+     font-size: 1.6rem;
+}
+
+
+/* reescribir clase de boostrar */
+
+.btn-primary{
+    background-color: var(--bs-blue) !important;
+    border: none;
+}
+
+.badge-primary{
+    background-color: var(--bs-blue) !important;
+}
+
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 3.2rem;
+}
+h3{
+    font-size: 2.4rem;
+}
+
+@media (min-width: 768px) {
+    h1{
+        font-size: 5rem;
+    }
+    h2{
+        font-size: 4rem;
+    }
+    h3{
+        font-size: 3rem;
+    }
+     
+}
+
+.margen{
+    margin-bottom: 5.8rem;
+}
