@@ -79,24 +79,27 @@ class UI {
         // Celda: acciones (botón actulizaar)
         const tdAcciones = document.createElement("td");
         const btnActualizar = document.createElement("button");
-        btnActualizar.classList.add("btn", "btn-primary", "btn-sm");
+        btnActualizar.classList.add("btn", "btn-primary", "btn-sm", );
         btnActualizar.textContent = "Actualizar";
         btnActualizar.addEventListener("click", () => {
           actualizarCantidad(id);
         });
 
-        // Desabilitamos el boton cuando la cantidad es menor o igual a 0
-        if(producto.cantidad <=0){
-          btnActualizar.classList.add('opacity-50', 'disabled');
-        }
-
+    
         // Celda: acciones (botón borrar)
         const btnBorrar = document.createElement("button");
-        btnBorrar.classList.add("btn", "btn-danger", "btn-sm", "ms-2");
+        btnBorrar.classList.add("btn", "btn-danger", "btn-sm", "ms-2", "opacity-50", 'disabled');
         btnBorrar.textContent = "Borrar";
         btnBorrar.addEventListener("click", () => {
           eliminarProducto(id);
         });
+
+         // Desabilitamos el boton cuando la cantidad es menor o igual a 0
+        if(producto.cantidad <=0){
+          btnActualizar.classList.add('opacity-50', 'disabled');
+          btnBorrar.classList.remove('opacity-50', 'disabled')
+        }
+
 
 
         tdAcciones.appendChild(btnActualizar);
