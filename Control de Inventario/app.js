@@ -131,8 +131,6 @@ class UI {
 
 };
 
- 
-
 
 // instancias
 const productos = new Producto();
