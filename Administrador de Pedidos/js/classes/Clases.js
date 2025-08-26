@@ -35,7 +35,9 @@ import { editarPedido } from "../funciones.js";
 
 export class adminPedidos {
   constructor() {
+    // extraemos el arreglo convertido de local storage
     this.listaPedidos = JSON.parse(localStorage.getItem('pedidos')) || [];
+    console.log(this.listaPedidos)
     this.mostrarPedidos();
   }
 
@@ -113,6 +115,8 @@ export class adminPedidos {
 
   eliminar(id){
     this.listaPedidos = this.listaPedidos.filter(pedido => pedido.id !== id);
+    // eliminamos de localStorage
+    localStorage.removeItem('pedidos');
     this.mostrarPedidos();
   }
 
