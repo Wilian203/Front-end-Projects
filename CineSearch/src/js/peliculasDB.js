@@ -1,4 +1,4 @@
-const peliculas = [
+ export const peliculas = [
   { 
     nombre: 'Avengers: Endgame', 
     categoria: 'accion', 

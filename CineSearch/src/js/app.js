@@ -1,3 +1,5 @@
+import { peliculas } from "./peliculasDB.js";
+
 document.addEventListener('DOMContentLoaded', ()=>{
     mostrarPeliculas(peliculas);
     mostraryearSelec();
