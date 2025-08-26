@@ -1,47 +1,6 @@
-// Variables
-const formulario = document.querySelector("#formPedido");
-const contenedorPedidos = document.querySelector("#contenedorPedidos");
-const clienteInput = document.querySelector("#cliente");
-const productoSelect = document.querySelector("#producto");
-const cantidadInput =  document.querySelector("#cantidad");
-const precioInput = document.querySelector("#precio");
-const estadoSelect = document.querySelector("#estado");
-const formularioBtn =document.querySelector('#formPedido button[type="submit"]');
-const btnReinicar = document.querySelector('#reinicar');
-
-
-let edicion = false;
-
-// objeto en donde se guardaran los datos
-const datosObj = {
-  id: Date.now().toString(),
-  cliente: "",
-  producto: "",
-  cantidad: "",
-  precio: "",
-  estado: "",
-  hora: new Date().toLocaleTimeString('en-US', {
-    hour: 'numeric',
-    minute: '2-digit',
-    hour12: true
-  })
-};
-
-// Eventos
-eventListneres();
-function eventListneres() {
-  clienteInput.addEventListener("change", datosPedido);
-  productoSelect.addEventListener("change", datosPedido);
-  cantidadInput.addEventListener("change", datosPedido);
-  precioInput.addEventListener("change", datosPedido);
-  estadoSelect.addEventListener("change", datosPedido);
-  formulario.addEventListener("submit", validarPedido);
-  btnReinicar.addEventListener('click', reinicarTotal);
-}
-
+import { editarPedido } from "../funciones.js";
 // Clases
-
-class Notificacion {
+ export class Notificacion {
   constructor({ texto, tipo }) {
     this.texto = texto;
     this.tipo = tipo;
@@ -74,14 +33,16 @@ class Notificacion {
   }
 }
 
-class adminPedidos {
+export class adminPedidos {
   constructor() {
-    this.listaPedidos = [];
+    this.listaPedidos = JSON.parse(localStorage.getItem('pedidos')) || [];
+    this.mostrarPedidos();
   }
 
   listarPedido(pedido) {
     this.listaPedidos = [...this.listaPedidos, pedido];
-    console.log(this.listaPedidos);
+     // Guardar pedidos en localStorage
+    localStorage.setItem('pedidos', JSON.stringify(this.listaPedidos));
     this.mostrarPedidos();
   }
 
@@ -162,94 +123,3 @@ class adminPedidos {
     };
   };
 };
-
-// instancias
-const adminPedido = new adminPedidos();
-
-// Funciones
-function datosPedido(e) {
-  e.preventDefault();
-
-  // ingresar los datos del formulario al objeto
-  datosObj[e.target.name] = e.target.value;
-}
-
-function validarPedido(e) {
-  e.preventDefault();
-  // convertimos los valores en un arreglo para validar que el formulario no tenga campos vacios
-  if (Object.values(datosObj).some((dato) => dato.trim() === "")) {
-    new Notificacion({
-      texto: "Todos los campos son obligatorios",
-      tipo: "error",
-    });
-    return;
-  };
-
-
-  if(edicion){
-    adminPedido.editar({...datosObj});
-    new Notificacion({
-        texto: "Guardado Correctamente",
-        tipo: "exito",
-    });
-  }
-  else{
-    new Notificacion({
-      texto: "Pedido agregado correctamente",
-      tipo: "exito",
-    });
-    // una vez se pase la validacion le pasamos una copia al arreglo que esta en la clase de adminPedidos
-    adminPedido.listarPedido({ ...datosObj });
-  };
-
-  adminPedido.sumarCantidades({...datosObj});
-
-  
-
-  // Resetamos el formulario
-  formulario.reset();
-  // Reiniciamos el objeto
-  reiniciarObjeto();
-  // volvemos a pasar la edicion a false para crear ordenes nuevas
-  edicion = false;
-
-  formularioBtn.textContent = 'Agregar Pedido';
-};
-
-function reiniciarObjeto (){
-    Object.assign(datosObj,{
-          id: Date.now().toString(),
-          cliente: "",
-          producto: "",
-          cantidad: "",
-          precio: "",
-          estado: "",
-          hora: new Date().toLocaleTimeString('en-US', {
-            hour: 'numeric',
-            minute: '2-digit',
-            hour12: true
-        })
-    });
-};
-
-function editarPedido(pedido){
-  // como el objeto queda vacio porque lo reiniciamos cuando demos click editar lo volvemos a llenar con la informacion que coloco
-  // el admin para llenar los inputs.
-  Object.assign(datosObj, pedido);
-
-  // llenar los inputs
-  clienteInput.value = pedido.cliente;
-  productoSelect.value = pedido.producto;
-  cantidadInput.value = pedido.cantidad;
-  precioInput.value = pedido.precio;
-  estadoSelect.value = pedido.estado;
-
-  edicion = true;
-
-  formularioBtn.textContent = 'Guardar Cambios';
-};
-
-function reinicarTotal(){
-   document.querySelector('#totalDia').textContent = 'RD$ 0.00'
-};
-
