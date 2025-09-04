@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preload" href="css/normalize.css" as="style" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="preload" href="css/styles.css" as="style" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <header class="header contenedor">
+      <div class="header-flex">
+        <img src="images/icon-menu.svg" id="menu" alt="icono de menu" />
+        <h1>Sneakers</h1>
+
+        <nav class="navegacion">
+          <a href="#">Collections</a>
+          <a href="#">Men</a>
+          <a href="#">Women</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+      <div class="header-usuario">
+        <div class="cart-container">
+          <img
+            class="header-cart"
+            src="images/icon-cart.svg"
+            alt="icono carrito"
+          />
+          <!-- carrito -->
+          <div class="cart-container">
+            <!-- Ventana del carrito -->
+            <div class="cart-dropdown">
+              <h4>Cart</h4>
+              <div class="cart-content empty">
+                <p>Your cart is empty</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img
+          class="header-user"
+          src="images/image-avatar.png"
+          alt="imagen de usuario"
+        />
+      </div>
+    </header>
+    <div class="hero">
+      <div class="hero-flechas contenedor">
+        <div class="hero-flecha">
+          <img src="images/icon-previous.svg" alt="icono previo" />
+        </div>
+        <div class="hero-flecha">
+          <img src="images/icon-next.svg" alt="icono siguiente" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlay oscuro -->
+    <div class="overlay"></div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <button class="close-btn">×</button>
+      <ul>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="contenido contenedor">
+      <div class="galeria">
+        <img src="images/image-product-1.jpg" alt="producto-1" />
+
+        <ul class="carrousel">
+          <li>
+            <img src="images/image-product-1.jpg" alt="imagen de producto" />
+          </li>
+          <li>
+            <img src="images/image-product-2.jpg" alt="imagen de producto" />
+          </li>
+          <li>
+            <img src="images/image-product-3.jpg" alt="imagen de producto" />
+          </li>
+          <li>
+            <img src="images/image-product-4.jpg" alt="imagen de producto" />
+          </li>
+        </ul>
+      </div>
+      <!-- galeria -->
+
+      <div class="info">
+        <p class="company">Sneakers Company</p>
+        <h2>Fall Limited Edition Sneakers</h2>
+        <p class="texto">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita at
+          inventore est error ipsam recusandae? Illo at impedit quasi rerum enim
+          velit quisquam optio suscipit! Aperiam esse voluptas nemo explicabo.
+        </p>
+        <div class="contenido-precios">
+          <p class="precio">
+            $125.00 
+            <span class="cantidad-descuento">50%</span>
+          </p>
+          <p class="descuento">$250</p>
+        </div>
+        <!-- conenido-precios -->
+
+        <div class="botones">
+          <div class="contador">
+            <button class="boton minus">−</button>
+            <span class="valor">0</span>
+            <button class="boton plus">+</button>
+          </div>
+
+          <button class="agregar-carrito">
+            <img src="images/icon-cart.svg" alt="icono del carrito" />
+            <p>Add Cart</p>
+          </button>
+        </div>
+        <!-- botones -->
+      </div>
+      <!-- info -->
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
