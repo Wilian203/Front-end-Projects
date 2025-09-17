@@ -1,0 +1,53 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+   
+}
+*, 
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body{
+    background-color: #14161A;
+    font-size: 1.6rem;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+aside{
+    background-color: #1B1D23;
+    height: 100%;
+}
+
+li{
+    padding: 1rem;
+
+    &:hover{
+          background-color: #282C34;
+         border-radius: .5rem;
+         cursor: pointer;
+    }
+}
+
+.enlace{
+    padding: 1rem ;
+    &:hover{
+        background-color: #282C34;
+        border-radius: .5rem;
+
+        a{
+            color: #fff;
+        }
+    }
+}
+
+.lista{
+    padding: 1rem;
+}
+
+.img-logo{
+    width: 8rem;
+}

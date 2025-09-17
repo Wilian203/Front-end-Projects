@@ -73,7 +73,8 @@ export function reiniciarObjeto (){
 };
 
 export function editarPedido(pedido){
-  // como el objeto queda vacio porque lo reiniciamos cuando demos click editar lo volvemos a llenar con la informacion que coloco
+  // como el objeto queda vacio porque lo reiniciamos cuando demos click editar lo volvemos a llenar con la 
+  // informacion que coloco
   // el admin para llenar los inputs.
   Object.assign(datosObj, pedido);
 

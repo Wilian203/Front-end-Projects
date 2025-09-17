@@ -37,7 +37,7 @@ export class adminPedidos {
   constructor() {
     // extraemos el arreglo convertido de local storage
     this.listaPedidos = JSON.parse(localStorage.getItem('pedidos')) || [];
-    console.log(this.listaPedidos)
+
     this.mostrarPedidos();
   }
 

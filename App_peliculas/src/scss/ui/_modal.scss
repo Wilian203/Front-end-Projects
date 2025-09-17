@@ -1,0 +1,24 @@
+.modal {
+  .modal-content {
+   background-color: rgba(20, 20, 20, 0.7); 
+
+  }
+
+  .modal-body {
+    max-height: 70vh; /* Scroll si es muy largo */
+    overflow-y: auto;
+  }
+
+  .modal-img img {
+    max-width: 200px;
+  }
+
+  .modal-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .btn-close-white {
+    filter: invert(1); /* Botón de cerrar blanco */
+  }
+}

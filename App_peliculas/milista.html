@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="build/css/app.css" />
+    <title>StreamFlix</title>
+  </head>
+  <body>
+    <header class="border-bottom">
+      <div
+        class="mx-5 py-5 d-md-flex justify-content-md-between align-items-md-center"
+      >
+        <div class="logo d-flex align-items-center column-gap-2">
+          <img
+            class="img-fluid img-logo"
+            src="src/img/popcorn-logo-Dunx1O6E (1).png"
+            alt="imagen logo"
+          />
+          <h1 class="text-white fw-bold">StreamFlix</h1>
+        </div>
+
+        <div class="d-flex gap-5">
+          <a href="index.html" class="enlace text-decoration-none fs-2 text-secondary"
+            >Peliculas</a
+          >
+          <a href="#" class="enlace text-decoration-none fs-2 text-secondary"
+            >Series</a
+          >
+        </div>
+
+        <nav class="d-flex gap-5">
+          <a href="milista.html" class="text-decoration-none fs-2 text-white bg-danger rounded-2 lista"
+            >Mi lista</a
+          >
+          <a href="#" class="text-decoration-none fs-2 text-secondary lista"
+            >Perfil</a
+          >
+        </nav>
+      </div>
+    </header>
+
+   
+
+      <div
+        class="modal fade"
+        id="movieModal"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+          <div class="modal-content  text-white border-0">
+            <!-- Header con título y botón de cerrar -->
+            <div class="modal-header border-0">
+              <h5 class="modal-title fs-1" id="modalTitle"></h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <!-- Body con imagen y descripción -->
+            <div class="modal-body d-flex flex-column flex-md-row gap-4">
+              <div class="modal-img flex-shrink-0">
+                <img
+                  id="modalPoster"
+                  src=""
+                  alt="Poster"
+                  class="img-fluid rounded"
+                />
+              </div>
+              <div class="modal-text">
+                <p class="text-white mb-2 fs-2">Descripción</p>
+                <p class="fs-3" id="modalOverview"></p>
+              </div>
+            </div>
+             <div class="modal-footer">
+                    <button id="agregar" class="btn btn-secondary col p-2 fs-3 rounded-3 ">Agregar a mi lista</button>
+                    <button class="btn btn-danger col p-2 fs-3 rounded-3 " data-bs-dismiss="modal" data-bs-targer="modal">Cerrar</button>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-danger text-white">
+                <strong class="me-auto text-white">StreamFlix</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body"></div>
+        </div>
+    </div>
+
+      <main class="container">
+        <div class="col py-5">
+            <h2 class="fs-1 text-white">🎬 Mi lista</h2>
+            <div id="peliculas-container" class="peliculas row py-5"></div>
+       </div>
+      </main>
+      
+    </div>
+    <script src="build/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
