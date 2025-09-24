@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="build/css/app.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Gestor de Finanzas</title>
+</head>
+<body>
+    <header class="border-bottom container-xl py-4">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-4">
+           <i class="bi bi-wallet2 fs-4 bg-success p-2 rounded" style="color: #fff;"></i>
+           <h1 class="fw-bold ">Gestor de Finanzas</h1>
+        </div>
+        <div class="user">
+            <img class="img-fluid rounded-circle" src="src/img/alex-suprun-ZHvM3XIOHoE-unsplash.jpg" alt="usuario imagen">
+        </div>
+      </div>
+      
+    </header>
+    <!-- header -->
+
+    <div class="container-xl py-5 mt-5">
+      <div class="row">
+        <div class="col-md-4 mb-5">
+             <div class="card rounded-4 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center justify-content-between">
+                      <h5 class="card-title fs-3 text-secondary">Total de ingresos</h5>
+                      <i class="bi bi-graph-up-arrow bg-success-subtle text-success p-2 rounded-4"></i>
+                  </div>
+                  <p id="ingreso" class="card-text fs-1 bg-success-subtle mt-4 mb-4 p-1 text-success fw-bold ">RD $0</p>
+                </div>
+             </div>
+             <!-- card -->
+        </div>
+        <!-- col -->
+
+          <div class="col-md-4 mb-5">
+             <div class="card rounded-4 shadow-sm ">
+                <div class="card-body">
+                  <div class="d-flex align-items-center justify-content-between">
+                      <h5 class="card-title fs-3 text-secondary">Total de Gastos</h5>
+                      <i class="bi bi-graph-down-arrow bg-danger-subtle text-danger p-2 rounded-4"></i>
+                  </div>
+                  <p id="gastoTotal"  class="card-text fs-1 bg-danger-subtle mt-4 mb-4 p-1 text-danger fw-bold ">RD $0</p>
+                </div>
+             </div>
+             <!-- card -->
+        </div>
+        <!-- col -->
+
+          <div class="col-md-4 mb-5">
+             <div class="card rounded-4 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center justify-content-between">
+                      <h5 class="card-title fs-3 text-secondary">Balance Actual</h5>
+                      <i class="bi bi-currency-dollar bg-success-subtle text-success p-2 rounded-4"></i>
+                  </div>
+                  <p id="balance" class="card-text fs-1 bg-success-subtle mt-4 mb-4 p-1 text-success fw-bold ">RD $0</p>
+                </div>
+             </div>
+             <!-- card -->
+        </div>
+        <!-- col -->
+      </div>
+      <!-- row -->
+    </div>
+    <!-- contqiner -->
+
+    <main class="container-xl py-1">
+      <div class="row">
+          <div class="col-md-8 mb-5 mb-md-0">
+            <div class="border rounded-4 p-5 h-100 shadow-sm" >
+              <h2 class="fs-1 fw-bold">Distribución de Gastos</h2>
+              <div class="my-4">
+                <canvas id="gastosChart" class="mx-auto" width="400" height="400"></canvas>
+            </div>
+            </div>
+            
+          </div>
+          <!-- col -->
+
+          <div class="col-md-4">
+              <form action="" class="border p-5 rounded-4 shadow-sm mb-5 mb-md-0"  id="formulario">
+                <fieldset class="disabled">
+                  <div class="mb-5 d-flex align-items-center gap-3">
+                       <i class="bi bi-plus-circle-dotted fs-2"></i>
+                       <legend class="fs-1 fw-bold ">Agregar Transacción</legend>
+                  </div>
+                 
+                  <div class="mb-3">
+                    <label for="descripcion" class="form-label fw-medium"">Descripción</label>
+                    <input type="text" class="form-control p-3" name="descripcion" id="descripcion" placeholder="Ingrese una descripción...">
+                  </div>
+
+                   <div class="mb-3">
+                    <label for="monto" class="form-label fw-medium">Monto</label>
+                    <input type="text" class="form-control p-3" name="monto" id="monto" placeholder="Monto">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="categoria" class="form-label fw-medium"">Categoría</label>
+                    <select name="categoria" id="categoria" class="form-select p-3">
+                      <option class="form-control" value="">Seleccione una categoria</option>
+                      <option value="comida">Comida</option>
+                      <option value="transporte">Transporte</option>
+                      <option value="educacion">Eduación</option>
+                      <option value="compras">Compras</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="fecha" class="form-label fw-medium">Fecha</label>
+                    <input type="date" class="form-control p-3" id="fecha" name="fecha" >
+                  </div>
+                </fieldset>
+                <button type="submit" class="btn btn-danger w-100 fs-5 text-white p-2 ">Agregar Gasto</button>
+              </form>
+          </div>
+      </div>
+      <!-- row -->
+    </main>
+
+    <section class="container-xl py-5">
+      <div class="border p-4 rounded-4 shadow-sm">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-funnel fs-1"></i>
+          <h2 class="fw-bold fs-1">Transacciones Recientes</h2>
+        </div>
+        <form action="#" class="row py-4">
+            <div class="col mb-3 mb-md-0">
+              <select name="categoria" id="categoriaFiltro" class="form-select p-3">
+                <option value="">Todas las categorias</option>
+                <option value="comida">Comida</option>
+                <option value="transporte">Transporte</option>
+                <option value="educacion">Eduación</option>
+                <option value="compras">Compras</option>
+              </select>
+            </div>
+            <!-- col -->  
+        </form>
+
+        <div class="py-5" id="resultado">
+          <p class="text-center text-secondary">¡No hay transacciones aún. Agrega tu primera transacción arriba!</p>
+        </div>
+      </div>
+    
+    </section>
+
+    <!-- Modal -->
+  <div class="modal fade" id="startModal" tabindex="-1" aria-labelledby="startModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <h5 class="modal-title" id="startModalLabel">Bienvenido</h5>
+        </div>
+        
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="username" class="form-label">Ingresa tu presupuesto</label>
+              <input type="text" class="form-control p-3" id="presupuesto">
+            </div>             
+            <button type="submit" class="btn btn-success text-white w-100 p-2">Registrar presupuesto</button>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <script src="build/js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

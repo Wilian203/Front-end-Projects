@@ -1,0 +1,11 @@
+// paleta de colores
+$Verde:#42CD75;
+$rojo:#EF4343;
+
+
+$success:$Verde;
+$danger:$rojo;
+
+
+// importar bootstrap5
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss'

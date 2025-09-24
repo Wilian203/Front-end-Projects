@@ -1,0 +1,45 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+   
+}
+*, 
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body{
+    font-size: 1.6rem;
+    font-family: v.$fuente_principal;   
+}
+
+h1{
+    font-size: 2rem;
+    
+    @include m.tablet {
+        font-size: 3rem;
+    }
+}
+
+
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1rem;
+}
+
+.bi-trash{
+    cursor: pointer;
+}
+
+#gastosChart{
+    width: 400px;   
+    height: 400px; 
+}
+
+
