@@ -1,0 +1,82 @@
+@use 'variables' as v;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-padding-top: 0rem;
+}
+*, 
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: v.$fuente_principal;
+    color: v.$negro;
+    font-size: 2rem;
+    position: relative;
+}
+
+.contenedor {
+    width: 80%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+// utilidades
+.m-0{
+    margin: 0;
+}
+
+a {
+    font-size: 2rem;
+    text-decoration: none;
+}
+h1, h2, h3 {
+    margin: 0 0 5rem 0;
+    font-weight: 900;
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 2rem;
+   
+}
+h4{
+    font-size: 1rem;
+}
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.error{
+    color: red;
+    font-size: 1rem;
+    text-align: left;
+}
+
+#typed{
+    &::after{
+         content: '|';
+        animation: blink 0.7s infinite;
+    }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typed-cursor {
+  display: none 
+}
+
+
+

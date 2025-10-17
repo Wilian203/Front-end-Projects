@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio</title>
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      crossorigin="crossorigin"
+      as="font"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="build/css/app.css" as="style" />
+    <link rel="stylesheet" href="build/css/app.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header class="header contenedor">
+      <h2 class="header__logo">
+        Wilian <span class="header__bold">Mariñez</span>
+      </h2>
+      <nav class="navegacion">
+        <a class="navegacion__enlace" href="#home">Home</a>
+        <a class="navegacion__enlace" href="#about">About</a>
+        <a class="navegacion__enlace" href="#skill">Skill</a>
+        <a class="navegacion__enlace" href="#education">Education</a>
+        <a class="navegacion__enlace" href="#services">Services</a>
+        <a class="navegacion__enlace" href="#portfolio">Portfolio</a>
+        <a class="navegacion__enlace" href="#form">Contact me</a>
+        <svg
+          class="navegacion__dark-mode"
+          id="dark-mode"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.686 8.804a.788.788 0 0 0-.84-.115 6.283 6.283 0 0 1-2.694.6 6.423 6.423 0 0 1-4.587-1.952 6.802 6.802 0 0 1-1.92-4.71 7.26 7.26 0 0 1 .2-1.646.845.845 0 0 0-.267-.785.79.79 0 0 0-.796-.144 8.152 8.152 0 0 0-3.166 2.61 8.474 8.474 0 0 0-1.54 3.861 8.566 8.566 0 0 0 .47 4.146 8.339 8.339 0 0 0 2.365 3.393 8.01 8.01 0 0 0 3.665 1.788 7.889 7.889 0 0 0 4.049-.263 8.084 8.084 0 0 0 3.418-2.248 8.418 8.418 0 0 0 1.93-3.671.846.846 0 0 0-.016-.477.821.821 0 0 0-.271-.387zM8.09 14.307a6.384 6.384 0 0 1-3.739-1.249 6.682 6.682 0 0 1-2.357-3.236 6.88 6.88 0 0 1-.116-4.044 6.712 6.712 0 0 1 2.167-3.374v.222a8.473 8.473 0 0 0 2.377 5.896 8 8 0 0 0 5.73 2.445 7.618 7.618 0 0 0 1.678-.18 6.595 6.595 0 0 1-2.39 2.598 6.345 6.345 0 0 1-3.35.955v-.033z"
+            fill="#000"
+          ></path>
+        </svg>
+      </nav>
+      <div class="navegacion__hamburguesa" id="menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+          <path
+            d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"
+          />
+        </svg>
+      </div>
+    </header>
+
+    <section class="inicio contenedor" id="home">
+      <div class="inicio__grid">
+        <div class="inicio__contenido">
+          <h1 class="inicio__titulo">Hi, I'am Wilian</h1>
+           <p class="inicio__profesion" id="typed"></p>
+          <p class="inicio__parrafo">
+            Experience in web design and development, focused on responsive
+            layout, UI design in Figma, and currently expanding skills in
+            JavaScript to build modern and interactive solutions.
+          </p>
+          <div class="inicio__redes">
+            <ul class="redes">
+              <li class="redes__item">
+                <a href="#" class="redes__link" rel="noopener" target="_blank">
+                  <svg
+                    class="redes__svg"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                  >
+                    <path
+                      d="M237.9 461.4C237.9 463.4 235.6 465 232.7 465C229.4 465.3 227.1 463.7 227.1 461.4C227.1 459.4 229.4 457.8 232.3 457.8C235.3 457.5 237.9 459.1 237.9 461.4zM206.8 456.9C206.1 458.9 208.1 461.2 211.1 461.8C213.7 462.8 216.7 461.8 217.3 459.8C217.9 457.8 216 455.5 213 454.6C210.4 453.9 207.5 454.9 206.8 456.9zM251 455.2C248.1 455.9 246.1 457.8 246.4 460.1C246.7 462.1 249.3 463.4 252.3 462.7C255.2 462 257.2 460.1 256.9 458.1C256.6 456.2 253.9 454.9 251 455.2zM316.8 72C178.1 72 72 177.3 72 316C72 426.9 141.8 521.8 241.5 555.2C254.3 557.5 258.8 549.6 258.8 543.1C258.8 536.9 258.5 502.7 258.5 481.7C258.5 481.7 188.5 496.7 173.8 451.9C173.8 451.9 162.4 422.8 146 415.3C146 415.3 123.1 399.6 147.6 399.9C147.6 399.9 172.5 401.9 186.2 425.7C208.1 464.3 244.8 453.2 259.1 446.6C261.4 430.6 267.9 419.5 275.1 412.9C219.2 406.7 162.8 398.6 162.8 302.4C162.8 274.9 170.4 261.1 186.4 243.5C183.8 237 175.3 210.2 189 175.6C209.9 169.1 258 202.6 258 202.6C278 197 299.5 194.1 320.8 194.1C342.1 194.1 363.6 197 383.6 202.6C383.6 202.6 431.7 169 452.6 175.6C466.3 210.3 457.8 237 455.2 243.5C471.2 261.2 481 275 481 302.4C481 398.9 422.1 406.6 366.2 412.9C375.4 420.8 383.2 435.8 383.2 459.3C383.2 493 382.9 534.7 382.9 542.9C382.9 549.4 387.5 557.3 400.2 555C500.2 521.8 568 426.9 568 316C568 177.3 455.5 72 316.8 72zM169.2 416.9C167.9 417.9 168.2 420.2 169.9 422.1C171.5 423.7 173.8 424.4 175.1 423.1C176.4 422.1 176.1 419.8 174.4 417.9C172.8 416.3 170.5 415.6 169.2 416.9zM158.4 408.8C157.7 410.1 158.7 411.7 160.7 412.7C162.3 413.7 164.3 413.4 165 412C165.7 410.7 164.7 409.1 162.7 408.1C160.7 407.5 159.1 407.8 158.4 408.8zM190.8 444.4C189.2 445.7 189.8 448.7 192.1 450.6C194.4 452.9 197.3 453.2 198.6 451.6C199.9 450.3 199.3 447.3 197.3 445.4C195.1 443.1 192.1 442.8 190.8 444.4zM179.4 429.7C177.8 430.7 177.8 433.3 179.4 435.6C181 437.9 183.7 438.9 185 437.9C186.6 436.6 186.6 434 185 431.7C183.6 429.4 181 428.4 179.4 429.7z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="redes__item">
+                <a href="#" class="redes__link" rel="noopener" target="_blank">
+                  <svg
+                    class="redes__svg"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                  >
+                    <path
+                      d="M512 96L127.9 96C110.3 96 96 110.5 96 128.3L96 511.7C96 529.5 110.3 544 127.9 544L512 544C529.6 544 544 529.5 544 511.7L544 128.3C544 110.5 529.6 96 512 96zM231.4 480L165 480L165 266.2L231.5 266.2L231.5 480L231.4 480zM198.2 160C219.5 160 236.7 177.2 236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160zM480.3 480L413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480z"
+                    />
+                  </svg>
+                </a>
+              </li>
+
+              <li class="redes__item">
+                <a href="#" class="redes__link" rel="noopener" target="_blank">
+                  <svg
+                    class="redes__svg"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                  >
+                    <path
+                      d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="inicio__btn">
+            <a href="#form">Contact Me</a>
+            <svg
+              class="inicio__icono"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+            >
+              <path
+                fill="#ffffff"
+                d="M187.2 100.9C174.8 94.1 159.8 94.4 147.6 101.6C135.4 108.8 128 121.9 128 136L128 504C128 518.1 135.5 531.2 147.6 538.4C159.7 545.6 174.8 545.9 187.2 539.1L523.2 355.1C536 348.1 544 334.6 544 320C544 305.4 536 291.9 523.2 284.9L187.2 100.9z"
+              />
+            </svg>
+          </div>
+          <a href="#about" class="inicio__mouse" >
+            <svg
+              class="inicio__icon"
+              viewBox="0 0 20 28"
+              fill="#0069D1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 5.6C9.62112 5.6 9.25776 5.7475 8.98985 6.01005C8.72194 6.2726 8.57143 6.6287 8.57143 7V9.8C8.57143 10.1713 8.72194 10.5274 8.98985 10.7899C9.25776 11.0525 9.62112 11.2 10 11.2C10.3789 11.2 10.7422 11.0525 11.0102 10.7899C11.2781 10.5274 11.4286 10.1713 11.4286 9.8V7C11.4286 6.6287 11.2781 6.2726 11.0102 6.01005C10.7422 5.7475 10.3789 5.6 10 5.6ZM10 0C7.34784 0 4.8043 1.0325 2.92893 2.87035C1.05357 4.70821 0 7.20088 0 9.8V18.2C3.95203e-08 20.7991 1.05357 23.2918 2.92893 25.1296C4.8043 26.9675 7.34784 28 10 28C12.6522 28 15.1957 26.9675 17.0711 25.1296C18.9464 23.2918 20 20.7991 20 18.2V9.8C20 7.20088 18.9464 4.70821 17.0711 2.87035C15.1957 1.0325 12.6522 0 10 0ZM17.1429 18.2C17.1429 20.0565 16.3903 21.837 15.0508 23.1497C13.7112 24.4625 11.8944 25.2 10 25.2C8.1056 25.2 6.28878 24.4625 4.94924 23.1497C3.60969 21.837 2.85714 20.0565 2.85714 18.2V9.8C2.85714 7.94348 3.60969 6.16301 4.94924 4.85025C6.28878 3.5375 8.1056 2.8 10 2.8C11.8944 2.8 13.7112 3.5375 15.0508 4.85025C16.3903 6.16301 17.1429 7.94348 17.1429 9.8V18.2Z"
+                fill="#6E57E0"
+              ></path>
+            </svg>
+            <p>Scroll down</p>
+            <svg
+              class="inicio__icon"
+              viewBox="0 0 10 10"
+              fill="#0069D1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.75179 4.40384C9.6744 4.32581 9.58233 4.26388 9.48088 4.22162C9.37944 4.17935 9.27063 4.15759 9.16073 4.15759C9.05083 4.15759 8.94202 4.17935 8.84058 4.22162C8.73913 4.26388 8.64706 4.32581 8.56967 4.40384L5.83079 7.15104V0.832484C5.83079 0.611695 5.74309 0.39995 5.58697 0.243829C5.43084 0.087708 5.2191 0 4.99831 0C4.77752 0 4.56578 0.087708 4.40966 0.243829C4.25353 0.39995 4.16583 0.611695 4.16583 0.832484V7.15104L1.42695 4.40384C1.27019 4.24708 1.05758 4.15901 0.83589 4.15901C0.614198 4.15901 0.401586 4.24708 0.244827 4.40384C0.0880668 4.5606 0 4.77321 0 4.9949C0 5.21659 0.0880668 5.42921 0.244827 5.58597L4.40725 9.74838C4.48642 9.82417 4.57978 9.88359 4.68197 9.92321C4.78161 9.96725 4.88936 9.99 4.99831 9.99C5.10726 9.99 5.21501 9.96725 5.31465 9.92321C5.41684 9.88359 5.5102 9.82417 5.58937 9.74838L9.75179 5.58597C9.82982 5.50858 9.89175 5.4165 9.93402 5.31506C9.97628 5.21361 9.99804 5.1048 9.99804 4.9949C9.99804 4.885 9.97628 4.7762 9.93402 4.67475C9.89175 4.5733 9.82982 4.48123 9.75179 4.40384Z"
+                fill="#6E57E0"
+              ></path>
+            </svg>
+          </a>
+        </div>
+        <div class="perfil">
+          <picture>
+            <source srcset="build/img//perfil.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="build/img/perfil.png"
+              width="500"
+              height="300"
+              alt="perfil"
+            />
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="sobre-mi contenedor" id="about">
+      <h2 class="sobre-mi__titulo">About Me</h2>
+      <p class="sobre-mi__introduccion">My Introduction</p>
+      <div class="sobre-mi__grid">
+        <div class="sobre-mi__img">
+          <picture>
+            <source
+              srcset="build/img/IMG-20250726-WA0033.webp"
+              type="image/webp"
+            />
+            <img
+              loading="lazy"
+              src="build/img/IMG-20250726-WA0033.jpg"
+              width="500"
+              height="300"
+              alt="sobre-mi"
+            />
+          </picture>
+        </div>
+        <div class="sobre-mi__info">
+          <p>
+            I'm William Mariñez, passionate about web development with a focus
+            on creating modern, functional, and tailored digital experiences.
+            I'm driven by constant learning, design innovation, and the desire
+            to provide effective solutions through code.
+          </p>
+          <div class="inicio__btn">
+            <a href="#form">Contact Me</a>
+            <svg
+              class="inicio__icono"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+            >
+              <path
+                fill="#ffffff"
+                d="M187.2 100.9C174.8 94.1 159.8 94.4 147.6 101.6C135.4 108.8 128 121.9 128 136L128 504C128 518.1 135.5 531.2 147.6 538.4C159.7 545.6 174.8 545.9 187.2 539.1L523.2 355.1C536 348.1 544 334.6 544 320C544 305.4 536 291.9 523.2 284.9L187.2 100.9z"
+              />
+            </svg>
+          </div>
+          <!-- boton -->
+        </div>
+        <!-- info -->
+      </div>
+      <!-- grid -->
+    </section>
+
+    <section class="habilidades contenedor" id="skill">
+      <h2 class="habilidades__titulo-principal">Skills</h2>
+      <p class="habilidades__texto-principal">My technical level</p>
+      <div class="habilidades__grid">
+        <div class="habilidades__column-1">
+          <div class="habilidades__header">
+            <span class="habilidades__icon">{ }</span>
+            <div>
+              <div class="habilidades__flex">
+                <h2 class="habilidades__titulo">FrontEnd Developer</h2>
+                <span class="habilidades__arrow">
+                  <svg
+                    class="arrow-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                  >
+                    >
+                    <path
+                      d="M342.6 81.4C330.1 68.9 309.8 68.9 297.3 81.4L137.3 241.4C124.8 253.9 124.8 274.2 137.3 286.7C149.8 299.2 170.1 299.2 182.6 286.7L288 181.3L288 552C288 569.7 302.3 584 320 584C337.7 584 352 569.7 352 552L352 181.3L457.4 286.7C469.9 299.2 490.2 299.2 502.7 286.7C515.2 274.2 515.2 253.9 502.7 241.4L342.7 81.4z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <p class="habilidades__tiempo">More than 4 years</p>
+            </div>
+          </div>
+
+          <div class="habilidades__lista">
+            <div class="habilidades__item">
+              <div class="habilidades__texto">
+                <span class="habilidades__nombre">HTML/CSS</span>
+                <span class="habilidades__porcentaje">90%</span>
+              </div>
+              <div class="habilidades__barra">
+                <span
+                  class="habilidades__progreso habilidades__progreso--90"
+                ></span>
+              </div>
+            </div>
+
+            <div class="habilidades__item">
+              <div class="habilidades__texto">
+                <span class="habilidades__nombre">Javascript</span>
+                <span class="habilidades__porcentaje">40%</span>
+              </div>
+              <div class="habilidades__barra">
+                <span
+                  class="habilidades__progreso habilidades__progreso--40"
+                ></span>
+              </div>
+            </div>
+
+            <div class="habilidades__item">
+              <div class="habilidades__texto">
+                <span class="habilidades__nombre">Boostrap</span>
+                <span class="habilidades__porcentaje">80%</span>
+              </div>
+              <div class="habilidades__barra">
+                <span
+                  class="habilidades__progreso habilidades__progreso--80"
+                ></span>
+              </div>
+            </div>
+
+            <div class="habilidades__item">
+              <div class="habilidades__texto">
+                <span class="habilidades__nombre">Tailwind Css</span>
+                <span class="habilidades__porcentaje">80%</span>
+              </div>
+              <div class="habilidades__barra">
+                <span
+                  class="habilidades__progreso habilidades__progreso--80"
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="habilidades__column-2">
+          <div class="habilidades__header">
+            <svg
+              width="35px"
+              height="35px"
+              fill="#0069D1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+            >
+              <path
+                d="M192 96C192 78.3 177.7 64 160 64C142.3 64 128 78.3 128 96L128 128L96 128C78.3 128 64 142.3 64 160C64 177.7 78.3 192 96 192L128 192L128 448C128 483.3 156.7 512 192 512L400 512L400 448L192 448L192 96zM448 544C448 561.7 462.3 576 480 576C497.7 576 512 561.7 512 544L512 512L544 512C561.7 512 576 497.7 576 480C576 462.3 561.7 448 544 448L512 448L512 192C512 156.7 483.3 128 448 128L240 128L240 192L448 192L448 544z"
+              />
+            </svg>
+            <div>
+              <div class="habilidades__flex">
+                <h2 class="habilidades__titulo">Design UX/UI</h2>
+                <span class="habilidades__arrow">
+                  <svg
+                    class="arrow-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                  >
+                    >
+                    <path
+                      d="M342.6 81.4C330.1 68.9 309.8 68.9 297.3 81.4L137.3 241.4C124.8 253.9 124.8 274.2 137.3 286.7C149.8 299.2 170.1 299.2 182.6 286.7L288 181.3L288 552C288 569.7 302.3 584 320 584C337.7 584 352 569.7 352 552L352 181.3L457.4 286.7C469.9 299.2 490.2 299.2 502.7 286.7C515.2 274.2 515.2 253.9 502.7 241.4L342.7 81.4z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <p class="habilidades__tiempo">More than 4 years</p>
+            </div>
+          </div>
+
+          <div class="habilidades__lista">
+            <div class="habilidades__item">
+              <div class="habilidades__texto">
+                <span class="habilidades__nombre">Figma</span>
+                <span class="habilidades__porcentaje">60%</span>
+              </div>
+              <div class="habilidades__barra">
+                <span
+                  class="habilidades__progreso habilidades__progreso--60"
+                ></span>
+              </div>
+            </div>
+
+            <div class="habilidades__item">
+              <div class="habilidades__texto">
+                <span class="habilidades__nombre">Adobe XD</span>
+                <span class="habilidades__porcentaje">60%</span>
+              </div>
+              <div class="habilidades__barra">
+                <span
+                  class="habilidades__progreso habilidades__progreso--60"
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="education" id="education">
+      <h2 class="education__title">🎓 Education</h2>
+      <div class="education__timeline">
+        <div class="education__item education__item--left">
+          <div class="education__content">
+            <h3 class="education__degree">Software Development Technologist</h3>
+            <p class="education__place">
+              Loyola Specialized Institute of Higher Studies (IEESL) –
+              University
+            </p>
+            <span class="education__date">2021 – 2025</span>
+          </div>
+        </div>
+
+        <div class="education__item education__item--right">
+          <div class="education__content">
+            <h3 class="education__degree">Course: Professional Web Designl</h3>
+            <p class="education__place">Udemy – Online Platform</p>
+            <span class="education__date">Completed in 2023</span>
+          </div>
+        </div>
+
+        <div class="education__item education__item--left">
+          <div class="education__content">
+            <h3 class="education__degree">Course: CSS – The Complete Guide</h3>
+            <p class="education__place">Udemy – Online Plataform</p>
+            <span class="education__date">Completed in 2023</span>
+          </div>
+        </div>
+
+        <div class="education__item education__item--right">
+          <div class="education__content">
+            <h3 class="education__degree">Course: Bootstrap 5</h3>
+            <p class="education__place">Udemy – Online Platafomr</p>
+            <span class="education__date">Completed en 2024</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Overlay para oscurecer el fondo -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <!-- modal -->
+    <div class="modal" id="serviceModal">
+      <div class="modal__content">
+        <button class="modal__close" id="closeModal">&times;</button>
+
+        <h2 class="modal__title">
+          UI/UX <span class="modal__title--bold">Designer</span>
+        </h2>
+        <ul class="modal__list">
+          <li class="modal__item">🎯 I develop the user interface.</li>
+          <li class="modal__item">💻 Web page development.</li>
+          <li class="modal__item">⚙️ I create UX element interactions.</li>
+          <li class="modal__item">🚀 I position your company brand.</li>
+          <li class="modal__item">
+            🧩 I design prototypes in Figma and Adobe XD.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="modal" id="frontendModal">
+      <div class="modal__content">
+        <button class="modal__close" id="closeFrontendModal">&times;</button>
+
+        <h2 class="modal__title">
+          Frontend <span class="modal__title--bold">Developer</span>
+        </h2>
+        <ul class="modal__list">
+          <li class="modal__item">
+            🌐 I design responsive web pages using HTML and SCSS.
+          </li>
+          <li class="modal__item">
+            🎨 I use modern tools like Tailwind CSS and Bootstrap 5.
+          </li>
+          <li class="modal__item">
+            💻 I build interactive interfaces with JavaScript.
+          </li>
+          <li class="modal__item">
+            ⚛️ I have experience working with React and Angular frameworks.
+          </li>
+          <li class="modal__item">
+            🚀 I turn UI designs into fully functional websites.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="servicios contenedor" id="services">
+      <h2 class="servicios__titulo">Services</h2>
+      <p class="servicios__parrafo">What I offer</p>
+
+      <div class="servicios__grid">
+        <div class="servicio">
+          <svg
+            width="35px"
+            height="35px"
+            fill="#0069D1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 640 640"
+          >
+            <path
+              d="M192 96C192 78.3 177.7 64 160 64C142.3 64 128 78.3 128 96L128 128L96 128C78.3 128 64 142.3 64 160C64 177.7 78.3 192 96 192L128 192L128 448C128 483.3 156.7 512 192 512L400 512L400 448L192 448L192 96zM448 544C448 561.7 462.3 576 480 576C497.7 576 512 561.7 512 544L512 512L544 512C561.7 512 576 497.7 576 480C576 462.3 561.7 448 544 448L512 448L512 192C512 156.7 483.3 128 448 128L240 128L240 192L448 192L448 544z"
+            />
+          </svg>
+          <h3 class="servicio__titulo">UX/UI Designer</h3>
+          <p class="servicio__texto" data-modal="serviceModal">View More</p>
+        </div>
+
+        <div class="servicio">
+          <span class="habilidades__icon servicio__margen">{ }</span>
+          <h3 class="servicio__titulo">FrontEnd Developer</h3>
+          <p class="servicio__texto" data-modal="frontendModal">View More</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="portafolio contenedor" id="portfolio">
+      <h2 class="portafolio__titulo">Porfolio</h2>
+      <p class="portafolio__parrafo">My Jobs</p>
+
+      <div class="card">
+        <h3 class="card__titulo--principal">HTML/CSS Projects</h3>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card__grid">
+                <div class="card__img">
+                  <picture>
+                    <source
+                      srcset="build/img/arquitecturaBosque.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="build/img/arquitecturaBosque.png"
+                      width="500"
+                      height="300"
+                      alt="bosque"
+                    />
+                  </picture>
+                </div>
+                <div class="card__info">
+                  <h4 class="card__titulo">Forest architecture</h4>
+                  <p class="card__parrafo">
+                    Landing page developed in HTML and CSS for the purchase and
+                    sale of homes in wooded areas. The design was laid out
+                    following best practices for semantic structure and styling
+                    with pure CSS.
+                  </p>
+                  <a
+                    href="https://velvety-concha-6baea3.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="card__boton"
+                    >Demo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- slide -->
+            <div class="swiper-slide">
+              <div class="card__grid">
+                <div class="card__img">
+                  <picture>
+                    <source
+                      srcset="build/img/blog_cafe.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="build/img/blog_cafe.png"
+                      width="500"
+                      height="300"
+                      alt="cafe"
+                    />
+                  </picture>
+                </div>
+                <div class="card__info">
+                  <h4 class="card__titulo">Coffee blog</h4>
+                  <p class="card__parrafo">
+                    Simulated coffee sales page, developed with HTML5 and CSS3.
+                    It includes a blog with recipes, advice and curiosities
+                    about the world of coffee.
+                  </p>
+                  <a
+                    href="https://jolly-gumdrop-89b4ad.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="card__boton"
+                    >Demo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- slide -->
+            <div class="swiper-slide">
+              <div class="card__grid">
+                <div class="card__img">
+                  <picture>
+                    <source
+                      srcset="build/img/guitarLa.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="build/img/guitarLa.png"
+                      width="500"
+                      height="300"
+                      alt="guitar"
+                    />
+                  </picture>
+                </div>
+                <div class="card__info">
+                  <h4 class="card__titulo">GuitarLA</h4>
+                  <p class="card__parrafo">
+                    Simulated website of guitar sales, developed with HTML5 and
+                    CSS3. It presents products, descriptions, prices and a
+                    structure oriented to electronic commerce.
+                  </p>
+                  <a
+                    href="https://warm-quokka-e19806.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="card__boton"
+                    >Demo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- slide -->
+          </div>
+          <!-- swiper -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <!-- swipper-wrapper -->
+      </div>
+      <!-- card -->
+
+      <div class="card">
+        <h3 class="card__titulo--principal">FrontEnd Developer Projects</h3>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card__grid">
+                <div class="card__img">
+                  <picture>
+                    <source srcset="build/img/burguer.webp" type="image/webp" />
+                    <img
+                      loading="lazy"
+                      src="build/img/burguer.png"
+                      width="500"
+                      height="300"
+                      alt="burger"
+                    />
+                  </picture>
+                </div>
+                <div class="card__info">
+                  <h4 class="card__titulo">Burguer Bliss</h4>
+                  <p class="card__parrafo">
+                    BurgerBliss is a burger sales website featuring form
+                    validation, simulated order submissions, and an interactive
+                    shopping cart through DOM manipulation. Built with HTML,
+                    CSS, SASS, and JavaScript.
+                  </p>
+                  <a
+                    href="https://velvety-concha-6baea3.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="card__boton"
+                    >Demo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- slide -->
+            <div class="swiper-slide">
+              <div class="card__grid">
+                <div class="card__img">
+                  <picture>
+                    <source
+                      srcset="build/img/festival.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="build/img/festival.png"
+                      width="500"
+                      height="300"
+                      alt="festival"
+                    />
+                  </picture>
+                </div>
+                <div class="card__info">
+                  <h4 class="card__titulo">Music Festival</h4>
+                  <p class="card__parrafo">
+                    Website for a music festival featuring scroll-based dynamic
+                    navigation, style transitions, an interactive image gallery
+                    with modal view, and a ticket reservation section. Built
+                    with HTML, CSS, and JavaScript.
+                  </p>
+                  <a
+                    href="https://jolly-gumdrop-89b4ad.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="card__boton"
+                    >Demo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- slide -->
+            <div class="swiper-slide">
+              <div class="card__grid">
+                <div class="card__img">
+                  <picture>
+                    <source
+                      srcset="
+                        build/img/{B8F2D81D-1A56-483A-9907-114CAE320F5A}.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="build/img/{B8F2D81D-1A56-483A-9907-114CAE320F5A}.png"
+                      width="500"
+                      height="300"
+                      alt="cine"
+                    />
+                  </picture>
+                </div>
+                <div class="card__info">
+                  <h4 class="card__titulo">CineSerach</h4>
+                  <p class="card__parrafo">
+                    CineSearch is a movie search web app with filtering by
+                    title, category, and year. It uses a simulated database
+                    created with JavaScript (an array of objects) and array
+                    methods like filter() to display dynamic results. Built with
+                    HTML, CSS, and JavaScript.
+                  </p>
+                  <a
+                    href="https://magnificent-sable-9a8b54.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="card__boton"
+                    >Demo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- slide -->
+          </div>
+          <!-- swiper -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <!-- swipper-wrapper -->
+      </div>
+      <!-- card -->
+    </section>
+
+    <section class="formulario contenedor" id="form">
+      <h2 class="formulario__titulo">Contact Me</h2>
+      <p class="formulario__parrafo">Get in touch</p>
+      <form class="form">
+        <div class="form__grid">
+          <div class="form__campo">
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              class="form__input"
+              placeholder="Nombre"
+            />
+          </div>
+
+          <div class="form__campo">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form__input"
+              placeholder="Email"
+            />
+          </div>
+
+          <div class="form__campo">
+            <input
+              type="text"
+              name="projecto"
+              id="projecto"
+              class="form__input"
+              placeholder="Project"
+            />
+          </div>
+
+          <div class="form__campo">
+            <textarea
+              class="form__textarea"
+              name="mensaje"
+              id="mensaje"
+              placeholder="Message"
+            ></textarea>
+          </div>
+        </div>
+        <input class="form__btn" type="submit" value="Contact me" disabled />
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__flex contenedor">
+        <div class="footer__info">
+          <h2 class="footer__titulo">Wilian</h2>
+          <p class="footer__texto">FrontEnd Developer</p>
+        </div>
+
+        <nav class="footer__nav">
+          <a class="footer__nav-enlaces" href="#">Services</a>
+          <a class="footer__nav-enlaces" href="#">Portfolio</a>
+          <a class="footer__nav-enlaces" href="#">Contac me</a>
+        </nav>
+      </div>
+      <p class="footer__derechos">
+        Todos los derechos reservados &copy;Wilian Mariñez
+      </p>
+    </footer>
+
+    <!-- boton scrool -->
+    <button id="scrollTopBtn" class="hide">
+      <svg class="progress-circle" viewBox="0 0 36 36">
+        <path class="track" d="M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32" />
+        <path
+          class="progress"
+          id="progressPath"
+          d="M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32"
+        />
+      </svg>
+
+      <svg
+        class="scroll"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 320 512"
+      >
+        <path
+          d="M168.5 164.5L296.5 292.5c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L160 223.9 57.4 326.5c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l128-128c9.4-9.3 24.6-9.3 34 0z"
+        />
+      </svg>
+    </button>
+
+    <script src="build/js/app.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="build/js/swipper.js"></script>
+  </body>
+</html>

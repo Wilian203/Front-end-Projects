@@ -1,0 +1,44 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.cars{
+    padding: 10rem 0;
+}
+
+.car{
+    margin-bottom: 4rem;
+
+    &__imagen{
+        background-color: lighten(v.$gris, 19);
+        padding: 1rem;
+    }
+
+    &__titulo{
+        font-size: 2rem;
+        font-weight: 300;
+        margin: 0;
+    }
+
+    &__precio{
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 2;
+    }
+    
+    &__btn{
+        display: inline-block;
+        text-align: center;
+        background-color: v.$azul;
+        color: v.$blanco;
+        padding: .7rem 3rem;
+        font-size: 1.2rem;
+        width: 100%;
+        border-radius: .5rem;
+
+        @include m.tablet{
+            width: auto;
+        }
+    }
+
+    
+}

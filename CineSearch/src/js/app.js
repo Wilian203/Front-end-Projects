@@ -121,11 +121,9 @@ function PeliculaNoEncontrada(){
 
 function filtrarTitulo(pelicula){
     const {titulo} = busqueda;
-
     if(titulo){
         return pelicula.nombre === titulo;
-    }
-
+    };
     return pelicula;
 };
 

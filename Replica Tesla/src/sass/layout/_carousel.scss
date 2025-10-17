@@ -1,0 +1,63 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.carousel{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    &__informacion{
+        position: absolute;
+        z-index: 1;
+    }
+
+    &__texto{
+         margin: 1rem 0;
+         color: #fff;
+         font-weight: 700;
+           font-size: 1rem;
+         @include m.tablet {
+            font-size: 2rem;
+         }
+    }
+
+    &__enlace{
+        font-size: 2rem;
+        @include m.tablet {
+            font-size: 4rem;
+        }
+        
+        text-decoration: none;
+        font-weight: 700;
+        color: #fff;
+        border-bottom: 2px solid #fff;
+    }
+
+    &___titulo{
+        font-size: 4rem;
+        @include m.tablet {
+             font-size: 8rem;
+        }
+       
+        color: #fff;
+        margin: 0;
+    }
+
+    &__botones{
+        margin-top: 2rem;
+
+    }
+
+    &__botones-2{
+        margin-top: 0;
+    }
+}
+
+.carousel-inner{
+    @include m.tablet {
+        height: 60rem;
+    }
+    
+}

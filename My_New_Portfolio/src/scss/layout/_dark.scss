@@ -1,0 +1,80 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.dark{
+    background-color: #161F27;
+
+   .header{
+        &__logo{
+            color: v.$blanco;
+        }
+   }
+
+   .navegacion{
+     &__enlace{
+        color: v.$blanco;
+     }
+   }
+
+   .inicio{
+        &__titulo{
+            color: v.$blanco;
+        }
+
+        &__mouse{
+            p{
+                color: v.$blanco;
+            }
+        }
+   }
+
+   .sobre-mi{
+        &__titulo{
+            color: v.$blanco;
+        }
+   }
+
+   .habilidades{
+        &__titulo-principal,
+        &__titulo
+        {
+            color: v.$blanco;
+        }
+        
+   }
+
+   .education{
+        &__title{
+            color: v.$blanco;
+        }
+   }
+
+   .servicios{
+     &__titulo{
+        color: v.$blanco;
+     }
+   }
+
+   .portafolio{
+        &__titulo{
+            color: v.$blanco;
+        }
+   }
+
+   .formulario__titulo{
+        color: v.$blanco;
+   }
+
+   .form__input,
+   .form__textarea{
+        background-color: #1D2935;
+   }
+   .card__titulo--principal,
+   .card__titulo{
+        color: v.$blanco;
+   }
+
+   #dark-mode{
+        fill: v.$blanco;
+   }
+}

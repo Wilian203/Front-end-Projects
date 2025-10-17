@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/build/css/app.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+    <title>Replica Tesla</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav
+        class="header__menu d-flex justify-content-between align-items-center container"
+      >
+        <a href="index.html" class="header__logo m-auto m-sm-0">
+          <svg
+            class="tds-icon tds-icon-logo-wordmark tds-site-logo-icon img-fluid"
+            viewBox="0 0 342 35"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="currentColor"
+              d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7m0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7m0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7M308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7"
+            ></path>
+          </svg>
+        </a>
+
+        <ul class="header__lista d-none d-md-flex">
+          <a href="vehiculos.html">
+            <li>Vehicle</li>
+          </a>
+          <a href="energy.html">
+              <li>Energy</li>
+          </a>
+         
+          <li>Charging</li>
+          <li>Discover</li>
+          <li>Shop</li>
+        </ul>
+
+        <ul class="header__logos d-none d-md-flex">
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 256 256"
+            >
+              <path
+                fill="currentColor"
+                d="M140 180a12 12 0 1 1-12-12a12 12 0 0 1 12 12M128 72c-22.06 0-40 16.15-40 36v4a8 8 0 0 0 16 0v-4c0-11 10.77-20 24-20s24 9 24 20s-10.77 20-24 20a8 8 0 0 0-8 8v8a8 8 0 0 0 16 0v-.72c18.24-3.35 32-17.9 32-35.28c0-19.85-17.94-36-40-36m104 56A104 104 0 1 1 128 24a104.11 104.11 0 0 1 104 104m-16 0a88 88 0 1 0-88 88a88.1 88.1 0 0 0 88-88"
+              />
+            </svg>
+          </li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0-18 0m.6-3h16.8M3.6 15h16.8"
+                />
+                <path d="M11.5 3a17 17 0 0 0 0 18m1-18a17 17 0 0 1 0 18" />
+              </g>
+            </svg>
+          </li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <g fill="none" fill-rule="evenodd">
+                <path
+                  d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"
+                />
+                <path
+                  fill="currentColor"
+                  d="M12 2c5.523 0 10 4.477 10 10a9.96 9.96 0 0 1-2.258 6.33l.02.022l-.132.112A9.98 9.98 0 0 1 12 22c-2.95 0-5.6-1.277-7.43-3.307l-.2-.23l-.132-.11l.02-.024A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2m0 15c-1.86 0-3.541.592-4.793 1.406A7.97 7.97 0 0 0 12 20a7.97 7.97 0 0 0 4.793-1.594A8.9 8.9 0 0 0 12 17m0-13a8 8 0 0 0-6.258 12.984C7.363 15.821 9.575 15 12 15s4.637.821 6.258 1.984A8 8 0 0 0 12 4m0 2a4 4 0 1 1 0 8a4 4 0 0 1 0-8m0 2a2 2 0 1 0 0 4a2 2 0 0 0 0-4"
+                />
+              </g>
+            </svg>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel__informacion mt-3 text-center">
+          <h1 id="modelo" class="carousel___titulo">Model S</h1>
+            <a
+            class="carousel__enlace"
+              href="https://www.tesla.com/modely/design?financeModalTab=finance_options&financeProduct=finplat.AUTO_LOAN%3ALOAN%3ACT_PRIVATE#overview"
+              >$0 Due at Signing
+            </a>
+          <p class="carousel__texto">From $31,4901 Order Now</p>
+          <div class="carousel__botones">
+             <a href="#" class="btn btn-primary">Order Now</a>
+             <a href="#" class="btn btn-light">View Invetory</a>
+          </div>
+          </div>
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+              
+            <div class="carousel-item active" data-modelo = 'Model S'>
+              <img src="build/img/images/Homepage-Model-S-Desktop-US.webp" class="d-block w-100" alt="model-s">
+            </div>
+            <div class="carousel-item" data-modelo = 'Modelo X'>
+              <img src="build/img/images/Homepage-Model-X-Desktop-US.webp" class="d-block w-100" alt="model-x">
+            </div>
+            <div class="carousel-item" data-modelo = 'Model Y'>
+              <img src="build/img/images/Homepage-Model-Y-Desktop-US-v2.webp" class="d-block w-100" alt="model-y">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </section>
+
+    <section class="card-modelos container">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img loading="lazy" class="img-fluid" src="build/img/images/Homepage-Model-3-Desktop-US.webp" alt="Model-3">
+                <div class="card-informacion">
+                  <h6>Sport Sedad</h6>
+                  <div class="card-texto">
+                      <h2>Model-3</h2>
+                       <div class="carousel__botones">
+                        <a href="#" class="btn btn-primary">Order Now</a>
+                        <a href="#" class="btn btn-light">View Invetory</a>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+              <img loading="lazy" class="img-fluid" src="build/img/images/Homepage-Cybertruck-Desktop-v3.webp" alt="Cybertruck">
+                <div class="card-informacion">
+                  <h6>Utility Truck</h6>
+                  <div class="card-texto">
+                      <h2>Cybertruck</h2>
+                       <div class="carousel__botones">
+                        <a href="#" class="btn btn-primary">Order Now</a>
+                        <a href="#" class="btn btn-light">View Invetory</a>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+              <img loading="lazy" class="img-fluid" src="build/img/images/Homepage-Model-S-Desktop-US.webp" alt="model-s">
+                <div class="card-informacion">
+                  <h6>Sport Sedad</h6>
+                  <div class="card-texto">
+                      <h2>Model-S</h2>
+                       <div class="carousel__botones">
+                        <a href="#" class="btn btn-primary">Order Now</a>
+                        <a href="#" class="btn btn-light">View Invetory</a>
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+    </section>
+
+    <main class="container">
+         <section class="card-container">
+          <div class="card-models ">
+               <div class="info-models">
+                <h2>Compare Models</h2>
+                <p>Find the Tesla vehicle that’s right for you.</p>
+                <a class="info-btn" href="#">Compare Models</a>
+              </div>
+              <div class="info-img-1">
+                  <img class="img-fluid" src="build/img/images/Mega-Menu-Vehicles-Model-S.webp" alt="Model-S">
+              </div>
+          </div> 
+          
+          <div class="card-models ">
+               <div class="info-models padding">
+                <h2>American Heroes</h2>
+                <p>Military, first responder, teacher and student purchase program.</p>
+                  <a class="info-btn" href="#">Learn More</a>
+              </div>
+              <div class="info-img-2">
+                  <img class="img-fluid" src="build/img/images/Homepage-SolarRoof-Desktop-US.webp" alt="Model-S">
+              </div>
+          </div>
+         </section>
+
+         <section id="map" class="mapa"></section>
+
+         <section class="change">
+            <div>
+              <div class="change-container">
+                  <div class="contenido">
+                    <h2>Find Your Change</h2>
+                    <p>View the network of Tesla Superchargers and Destination Chargers available near you.</p>
+                    <div class="botones">
+                      <a href="#" class="btn btn-dark">View Network</a>
+                      <a href="#" class="btn btn-secondary">Learn More</a>
+                    </div>
+                  </div>
+                <!-- change-contendio -->
+                 <div class="numbers">
+                    <div class="icons">
+                      <div class="icons-numbers">
+                          <h2>31.042</h2>
+                          <img loading="lazy" class="img-fluid" src="build/img/images/descarga.svg" alt="descarga">
+                      </div>
+                      <p>Superchargers</p>
+                    </div>
+                    <!-- icons -->
+                      <div class="icons">
+                        <div class="icons-numbers">
+                            <h2>10.404</h2>
+                            <img loading="lazy" class="img-fluid" src="build/img/images/carga.svg" alt="carga">
+                        </div>
+                        <p>Destination Chargers</p>
+                      </div>
+                    <!-- icons -->
+                 </div>
+                 <!-- numbers -->
+              </div>   
+               <!--change-container  -->
+            </div>
+         </section>
+
+         <section class="pt-5">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img loading="lazy" class="img-fluid" src="build/img/images/Homepage-Card-Solar-Panels-Desktop.avif" alt="solar-panels">
+                    <div class="card-informacion">
+                      <div class="card-texto">
+                          <h2 class="">Solar Panels</h2>
+                          <div class="carousel__botones carousel__botones-2">
+                            <a href="#" class="btn btn-primary">Order Now</a>
+                            <a href="#" class="btn btn-light">View Invetory</a>
+                          </div>
+                          <p class="text-white fs-4 lh-lg">Use Solar Energy to Power Your Home and Charge Your Tesla</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                  <img loading="lazy" class="img-fluid" src="build/img/images/Homepage-Card-Powerwall-Desktop.avif" alt="Cybertruck">
+                    <div class="card-informacion">
+                      <div class="card-texto">
+                          <h2>Powerwall</h2>
+                          <div class="carousel__botones">
+                            <a href="#" class="btn btn-primary">Order Now</a>
+                            <a href="#" class="btn btn-light">View Invetory</a>
+                          </div>
+                          <p class="text-white fs-4 lh-lg">Keep Your Lights On During Outages</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                  <img loading="lazy" class="img-fluid" src="build/img/images/Homepage-Card-Solar-Roof-Desktop.avif" alt="model-s">
+                    <div class="card-informacion">         
+                      <div class="card-texto">
+                          <h2>Solar Roof</h2>
+                          <div class="carousel__botones">
+                            <a href="#" class="btn btn-primary">Order Now</a>
+                            <a href="#" class="btn btn-light">View Invetory</a>
+                          </div>
+                          <p class="text-white fs-4 lh-lg">Generate Clean Energy With Your Roof</p>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+         </section>
+         
+    </main>
+
+
+
+    <footer class="footer container">
+      <div class="footer-nav">
+        <nav>
+          <a href="#">Tesla &copy;2025</a>
+          <a href="#">Privacy & Legal</a>
+          <a href="#">Vehicle Recalls</a>
+          <a href="#">Contact</a>
+          <a href="#">News</a>
+          <a href="#">Get Updates</a>
+          <a href="#">Locations</a>
+          <a href="">Learn</a>
+        </nav>
+      </div>
+    </footer>
+  
+   
+    <script src="src/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+     <script src="src/js/DB.js"></script>
+    <script src="src/js/app.js"></script>
+  </body>
+</html>

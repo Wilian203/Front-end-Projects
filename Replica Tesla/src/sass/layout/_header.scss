@@ -1,0 +1,58 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header{
+    position: relative;
+    &__logo{
+        text-decoration: none;
+             svg{
+                width: 13rem;
+                color:v.$negro;
+         }
+    }
+
+    &__lista,
+    &__logos{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        font-size: 1.3rem;
+        font-weight: 600;
+        li{
+            margin-right: 2rem;
+            padding: .5rem;
+            cursor: pointer;
+            color: v.$negro;
+
+            &:hover{
+                background-color: #e1e1e1;
+                border-radius: .5rem;
+            }
+        }
+    }
+
+    &__logos{
+        li{
+            margin-right: 1rem;
+        }
+
+        svg{
+            width: 2.2rem;
+            height: 2.2rem;
+        }
+    }
+    
+    &__menu{
+        padding: 1rem;
+        color: v.$negro;
+    }
+
+}
+
+
+
+
+   
+

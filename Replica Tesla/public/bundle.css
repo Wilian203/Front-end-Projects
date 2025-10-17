@@ -1,0 +1,138 @@
+.hero {
+  background-image: url(/img/images/Homepage-Model-Y-Desktop-US-v2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60rem;
+}
+
+.header .header__menu {
+  padding: 3rem;
+  color: #fff;
+}
+.header .header__menu .hader__logo {
+  text-decoration: none;
+}
+.header .header__menu .hader__logo svg {
+  width: 13rem;
+  color: #fff;
+}
+.header .header__menu .header__lista,
+.header .header__menu .header__logos {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.header .header__menu .header__lista li,
+.header .header__menu .header__logos li {
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.header .header__menu .header__logos li {
+  margin-right: 1rem;
+}
+.header .header__menu .header__logos svg {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.header .hader___titulo {
+  font-size: 5rem;
+  color: #fff;
+  margin: 0;
+}
+.header h3 {
+  font-size: 3rem;
+  margin: 0;
+}
+.header h3 a {
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+.header p {
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  color: #fff;
+  font-weight: 700;
+}
+.header .header__botones {
+  margin-top: 25rem;
+}
+@media (min-width: 768px) {
+  .header .header__botones {
+    margin-top: 30rem;
+  }
+}
+.header .header__botones .btn {
+  padding: 0.7rem 7rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.header__desplegable {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 54rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+.header__desplegable.activo {
+  display: block;
+}
+
+.header__vehiculos .header__vehiculo img {
+  width: 25rem;
+  margin-left: 5rem;
+}
+.header__vehiculos .header__vehiculo h3 {
+  font-size: 1.7rem;
+}
+.header__vehiculos .header__vehiculo .vehiculo__enlaces {
+  margin-top: 1rem;
+}
+.header__vehiculos .header__vehiculo .vehiculo__enlaces a {
+  text-decoration: none;
+  color: #c4c4c4;
+  font-size: 1.3rem;
+  border-bottom: 1.3px solid #c4c4c4;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", system-ui;
+  position: relative;
+}
+
+.hero-2 {
+  background-image: url("/img/images/Homepage-Cybertruck-Desktop-v3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem;
+  height: 60rem;
+}
+.hero-2 .hero-2__titulo {
+  font-size: 5rem;
+}
+
+.section-2__botones {
+  margin-top: 40rem;
+}
+.section-2__botones .btn {
+  padding: 0.7rem 7rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=bundle.css.map */

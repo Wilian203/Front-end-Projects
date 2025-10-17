@@ -1,0 +1,82 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.card-container{
+
+    @include m.desktop {
+        @include m.grid(2,2rem);
+    }
+}
+.card-models{
+    background-color:lighten(#e1e1e1, 8); 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    &:last-child{
+        padding: 0;
+    }
+    @include m.desktop {
+        margin-bottom: 0;
+    }
+    .padding{
+        padding: 2rem;
+    }
+    .info-models{
+    
+        .info-btn{
+            background-color: v.$blanco;
+            padding: .8rem 4rem;
+            border-radius: .5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: lighten(v.$negro, 20);
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+    }
+
+    .info-models h2{
+        margin: 0;
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+    .info-models p{
+    font-size: 1.4em;
+    color: darken(v.$gris, 30) 
+    }
+
+    .info-img-1{
+        img{
+            width: 20rem;
+            height: auto;   
+        }
+    }
+
+    .info-img-2{
+        width: 30rem;
+        height: 100%;
+        img{
+            border-top-right-radius: .5rem;
+            border-bottom-right-radius: .5rem;
+            width: 100%;
+            height: 24rem;
+            @include m.tablet{
+                 height: 21rem;
+            }  
+            object-fit: cover;
+        }
+    }
+
+    
+}
+
+
+
+
+   
+
