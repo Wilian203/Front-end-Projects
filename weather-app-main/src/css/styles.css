@@ -1,0 +1,127 @@
+:root {
+  /* Neutral */
+  --neutral-900: #0a021a;
+  --neutral-800: #322c45;
+  --neutral-700: #3b3450;
+  --neutral-600: #4c4660;
+  --neutral-300: #b8b7c7;
+  --neutral-200: #d6d6e1;
+  --neutral-0: #ffffff;
+
+  /* Orange */
+  --orange-500: #ff7300;
+
+  /* Blue */
+  --blue-500: #3d5cff;
+  --blue-700: #2b2f9e;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--neutral-900) !important;
+}
+
+h1{
+  font-size: 4rem !important;
+}
+
+/* dropdown */
+.dropdown-menu {
+  min-width: 150px !important;
+  background-color: #322c45 !important; /* Neutral 800 */
+  border: 1px solid #4c4660 !important; /* Neutral 600 */
+  border-radius: 0.5rem !important;
+  padding: 0.5rem 0 !important;
+  color: #ffffff !important;
+}
+
+.dropdown-item {
+  color: #ffffff !important;
+  cursor: pointer !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item.active {
+  background-color: #3b3450 !important; /* Neutral 700 */
+}
+
+.dropdown-header {
+  font-size: 0.8rem !important;
+  text-transform: uppercase !important;
+  color: #b8b7c7 !important; /* Neutral 300 */
+  padding: 0.25rem 1rem !important;
+}
+
+.dropdown-divider {
+  border-color: #4c4660 !important;
+}
+
+.btn-primary{
+  background-color: var(--blue-700) !important;
+  border-color: var(--blue-700) !important;
+}
+
+.contenido-imagen{
+  position: relative;
+}
+
+.info-imagen {
+  position: absolute;
+  top: 25%;
+  left: 5px;
+  width: calc(100% - 10px); /* esto hace que ocupe casi todo el ancho */
+}
+
+@media (min-width: 768px) {
+     .info-imagen{
+        top: 35%;
+        left: unse;
+     }
+}
+
+
+
+.info-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* centra verticalmente */
+}
+
+.grado{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.grado h2{
+  font-size: 5rem;
+}
+
+.card {
+  background-color: #1a1a4a !important;
+}
+
+.list-group-item:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 10px !important;
+  transition: 0.2s !important;
+}
+
+.card{
+  background-color: #25253F !important;
+  border-color: var(--neutral-300) !important;
+  color: white !important;
+}
+
+
