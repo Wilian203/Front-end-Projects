@@ -23,8 +23,13 @@ export function useCotizador(){
   };
 
   function calcularSeguro(){
+    // verifacmo que tanto la marca y el plan tengan algo para hace el calculo
+    if(!datos.marca|| !datos.plan ){
+      setResultado(0)
+      return;
+    }
     let base = 4000;
-
+ 
     switch(datos.marca){
         case 'europeo':
             base *=1.05
@@ -42,14 +47,28 @@ export function useCotizador(){
     const plan = datos.plan === 'completo' ? 1.50 : 1.25
     const total = base * plan
     setResultado(total);
+    
+   
   };
 
+  function reiniciar(){
+    setDatos({
+        marca: '',
+        year: 2025,
+        plan: ''
+    });
+    setResultado(0)
+    // recargamos la pagina
+    window.location.reload();
+  }
+
     return{
-        years,
-        agregarCotizacion,
-        datos,
-        setDatos,
-        calcularSeguro,
-        resultado
+      agregarCotizacion,
+      setDatos,
+      calcularSeguro,
+      reiniciar,
+       years,
+       datos,
+      resultado
     };
 };

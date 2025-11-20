@@ -2,8 +2,9 @@ type FormProps ={
     years: number[]
     agregarCotizacion: (e:React.ChangeEvent<HTMLInputElement | HTMLSelectElement>)=> void
     calcularSeguro: ()=>void
+    reiniciar: ()=>void
 }
-export function Form({years, agregarCotizacion, calcularSeguro}:FormProps) {
+export function Form({years, agregarCotizacion, calcularSeguro, reiniciar}:FormProps) {
   return (
     <div className="bg-white shadow-lg rounded-2xl w-full max-w-2xl p-6">
       <form className="space-y-6">
@@ -16,6 +17,7 @@ export function Form({years, agregarCotizacion, calcularSeguro}:FormProps) {
             name="marca"
             onChange={agregarCotizacion}
             className="w-full border border-gray-300 rounded-lg p-2.5 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
             >
               <option value="">Selecciona una marca</option>
               <option value="europeo">Europeo</option>
@@ -32,6 +34,7 @@ export function Form({years, agregarCotizacion, calcularSeguro}:FormProps) {
             name="year"
             onChange={ agregarCotizacion}
             className="w-full border border-gray-300 rounded-lg p-2.5 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
             >
               {years.map((year) => (
                 <option key={year} value={year}>
@@ -53,6 +56,7 @@ export function Form({years, agregarCotizacion, calcularSeguro}:FormProps) {
                 name="plan"
                 value="basico"
                 className="accent-blue-500"
+                required
                 onChange={ agregarCotizacion}
               />
               Básico
@@ -63,6 +67,7 @@ export function Form({years, agregarCotizacion, calcularSeguro}:FormProps) {
                 name="plan"
                 value="completo"
                 className="accent-blue-500"
+                required
                 onChange={agregarCotizacion}
               />
               Completo
@@ -81,7 +86,9 @@ export function Form({years, agregarCotizacion, calcularSeguro}:FormProps) {
           </button>
           <button
             type="button"
-            className="border border-gray-400 hover:bg-gray-100 text-gray-700 font-semibold py-2.5 px-5 rounded-lg transition"
+            className="border border-gray-400 hover:bg-gray-100 text-gray-700 font-semibold py-2.5 
+            px-5 rounded-lg transition"
+            onClick={reiniciar}
           >
             Reiniciar cotización
           </button>

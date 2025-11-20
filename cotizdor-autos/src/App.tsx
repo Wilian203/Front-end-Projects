@@ -4,7 +4,7 @@ import { Form} from "./components/Form";
 import { useCotizador } from "./hooks/useCotizador";
 function App() {
 
-  const{years, agregarCotizacion, datos, calcularSeguro, resultado} = useCotizador()
+  const{years, agregarCotizacion, datos, calcularSeguro, resultado, reiniciar} = useCotizador()
   return (
     <>
       <main className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
@@ -24,6 +24,7 @@ function App() {
           years={years}
           agregarCotizacion={agregarCotizacion}
           calcularSeguro={calcularSeguro}
+          reiniciar={reiniciar}
          
         />
 
